@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#05060a">
+<title>7 Ants Games: FUCK OFF (Mo' Mentum Mo' Problems) and Slot Theory</title>
+<meta name="description" content="7 Ants Games makes FUCK OFF: Mo' Mentum Mo' Problems, SubSpace-style space combat with 100 Hz physics that plays in your browser, and Slot Theory, a drafting tower defense on Steam.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="FUCK OFF: Mo' Mentum Mo' Problems | 7 Ants Games">
+<meta property="og:description" content="SubSpace-style space combat with 100 Hz physics. Eight ships, pubs of up to 100 pilots, a tutorial that roasts you. Play it in your browser.">
+<meta property="og:image" content="https://dextrome.github.io/7ants-games/assets/fuck-off/hero.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="fonts/SpaceGrotesk-400_700.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/Silkscreen-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="style.css?v=1">
+<script src="app.js?v=1" defer></script>
+</head>
+<body>
+<a class="skip" href="#fuck-off">Skip to the games</a>
+
+<header class="nav" id="nav">
+  <a class="brand" href="#top" aria-label="7 Ants Games, back to the top">
+    <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true"><path d="M7 6h18l-9 21" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linejoin="round"/><circle cx="23.5" cy="21" r="2.6"/><circle cx="26.8" cy="25.6" r="2"/><circle cx="20.6" cy="26.4" r="1.6"/></svg>
+    <span>7 Ants Games</span>
+  </a>
+  <nav aria-label="Sections">
+    <a href="#fuck-off">F<span class="nav-ship" aria-hidden="true"></span>CK OFF</a>
+    <a href="#slot-theory">Slot Theory</a>
+    <a href="#studio">Studio</a>
+  </nav>
+  <a class="btn btn-gold btn-small" href="https://play.7antsgames.com/?connect">Play now</a>
+</header>
+
+<main id="top">
+
+<!-- ================= FUCK OFF: hero ================= -->
+<section class="hero" id="fuck-off" aria-labelledby="fo-title">
+  <video class="hero-video" autoplay muted loop playsinline preload="auto" poster="assets/fuck-off/hero.jpg" aria-hidden="true">
+    <source src="assets/fuck-off/hero.mp4" type="video/mp4">
+  </video>
+  <div class="hero-shade" aria-hidden="true"></div>
+  <div class="scanlines" aria-hidden="true"></div>
+
+  <div class="hero-inner">
+    <p class="eyebrow pixel"><span class="live-dot" aria-hidden="true"></span>Now flying · plays in your browser</p>
+    <h1 class="wordmark" id="fo-title" aria-label="FUCK OFF">
+      <span aria-hidden="true">F</span><img class="wordmark-ship" src="assets/fuck-off/ships/kestrel.png" alt="" width="32" height="32"><span aria-hidden="true">CK OFF</span>
+    </h1>
+    <p class="subtitle pixel">Mo' Mentum Mo' Problems</p>
+    <p class="lede">SubSpace-style space combat with 100 Hz physics. Eight ships, two sides, pubs of up to 100 pilots fighting over orbs, and nothing that stops on its own.</p>
+    <div class="cta-row">
+      <a class="btn btn-gold btn-big" href="https://play.7antsgames.com/?connect">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4.5v15l12-7.5z"/></svg>Play online
+      </a>
+      <a class="btn btn-pink" href="https://play.7antsgames.com/?tutorial">Get roasted (tutorial)</a>
+      <a class="btn btn-ghost" href="https://play.7antsgames.com/?mode=duel">Duel a bot</a>
+    </div>
+    <p class="keys"><span>Desktop browser and a keyboard.</span> <kbd>Arrows</kbd> fly · <kbd>Ctrl</kbd> fires · <kbd>Tab</kbd> drops a bomb · <kbd>F1</kbd> shows every key</p>
+  </div>
+
+  <a class="scroll-cue pixel" href="#momentum" aria-label="Scroll to the next section">scroll<span aria-hidden="true">v</span></a>
+</section>
+
+<!-- Kill feed ticker -->
+<div class="ticker pixel" aria-hidden="true">
+  <div class="ticker-track">
+    <span>@angry_jackal destroyed by @AutoPilot</span><span class="t-pink">Space has no brakes. Neither do you.</span><span>@SaltyWalrus destroyed by @Captainjackal9</span><span class="t-chat">@Jackal173&gt; push the orbs together dude</span><span>@nebula_mako destroyed by @Captainjackal9</span><span class="t-pink">The final boss is the tutorial. Yes, it's personal.</span><span>@vex_krill destroyed by @ElBurrito</span><span class="t-chat">@space_viper&gt; Thanks for the kill Toaster419 man.</span><span>@BigComet destroyed by @Toaster419</span>
+    <span>@angry_jackal destroyed by @AutoPilot</span><span class="t-pink">Space has no brakes. Neither do you.</span><span>@SaltyWalrus destroyed by @Captainjackal9</span><span class="t-chat">@Jackal173&gt; push the orbs together dude</span><span>@nebula_mako destroyed by @Captainjackal9</span><span class="t-pink">The final boss is the tutorial. Yes, it's personal.</span><span>@vex_krill destroyed by @ElBurrito</span><span class="t-chat">@space_viper&gt; Thanks for the kill Toaster419 man.</span><span>@BigComet destroyed by @Toaster419</span>
+  </div>
+</div>
+
+<!-- ================= Momentum ================= -->
+<section class="band momentum" id="momentum" aria-labelledby="momentum-title">
+  <div class="wrap split">
+    <div class="split-copy reveal">
+      <p class="kicker pixel">Mo' Mentum</p>
+      <h2 id="momentum-title">Space has no brakes.<br><em>Neither do you.</em></h2>
+      <p>A ship keeps its speed until it thrusts the other way. To stop, turn around and push. Every shot inherits your velocity, every wall bounces you, and every pilot in the arena runs on the same simulation.</p>
+      <dl class="stats">
+        <div><dt>100</dt><dd>physics ticks a second</dd></div>
+        <div><dt>8</dt><dd>ships, two sides</dd></div>
+        <div><dt>100</dt><dd>pilots in one pub</dd></div>
+      </dl>
+    </div>
+    <figure class="toy reveal" aria-labelledby="toy-caption">
+      <canvas id="toy" width="640" height="440" aria-label="A Kestrel chasing your pointer. It keeps drifting until it turns around and thrusts the other way."></canvas>
+      <figcaption id="toy-caption" class="pixel"><span>Move your pointer here. The Kestrel chases it.</span><span id="toy-speed">0 px/s</span></figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ================= Clips ================= -->
+<section class="band clips" id="clips" aria-labelledby="clips-title">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="kicker pixel">Straight from the game</p>
+      <h2 id="clips-title">Rendered by the game itself.</h2>
+      <p>No screen recording, no editing by hand: every clip is played, filmed and captioned by the client. Tap one for sound.</p>
+    </div>
+  </div>
+  <div class="reel" role="list">
+    <figure class="clip reveal" role="listitem">
+      <div class="phone"><video muted loop playsinline preload="none" poster="assets/fuck-off/clips/tutorial-boss.jpg"><source src="assets/fuck-off/clips/tutorial-boss.mp4" type="video/mp4"></video><button class="sound" type="button" aria-pressed="false" aria-label="Sound: The tutorial fights back">♪</button></div>
+      <figcaption><strong>The tutorial fights back</strong><span>You need one kill. It needs five.</span></figcaption>
+    </figure>
+    <figure class="clip reveal" role="listitem">
+      <div class="phone"><video muted loop playsinline preload="none" poster="assets/fuck-off/clips/momentum.jpg"><source src="assets/fuck-off/clips/momentum.mp4" type="video/mp4"></video><button class="sound" type="button" aria-pressed="false" aria-label="Sound: Nothing stops on its own">♪</button></div>
+      <figcaption><strong>Nothing stops on its own</strong><span>To stop: turn around and push.</span></figcaption>
+    </figure>
+    <figure class="clip reveal" role="listitem">
+      <div class="phone"><video muted loop playsinline preload="none" poster="assets/fuck-off/clips/bot-pilots.jpg"><source src="assets/fuck-off/clips/bot-pilots.mp4" type="video/mp4"></video><button class="sound" type="button" aria-pressed="false" aria-label="Sound: The pilots remember you">♪</button></div>
+      <figcaption><strong>The pilots remember you</strong><span>Every bot is a persistent character.</span></figcaption>
+    </figure>
+    <figure class="clip reveal" role="listitem">
+      <div class="phone"><video muted loop playsinline preload="none" poster="assets/fuck-off/clips/hundred-pilots.jpg"><source src="assets/fuck-off/clips/hundred-pilots.mp4" type="video/mp4"></video><button class="sound" type="button" aria-pressed="false" aria-label="Sound: 100 pilots in one pub">♪</button></div>
+      <figcaption><strong>100 pilots in one pub</strong><span>Up to 50 a side, one simulation.</span></figcaption>
+    </figure>
+    <figure class="clip reveal" role="listitem">
+      <div class="phone"><video muted loop playsinline preload="none" poster="assets/fuck-off/clips/burst.jpg"><source src="assets/fuck-off/clips/burst.mp4" type="video/mp4"></video><button class="sound" type="button" aria-pressed="false" aria-label="Sound: Burst">♪</button></div>
+      <figcaption><strong>Burst</strong><span>75 pieces in every direction.</span></figcaption>
+    </figure>
+    <figure class="clip reveal" role="listitem">
+      <div class="phone"><video muted loop playsinline preload="none" poster="assets/fuck-off/clips/orbs.jpg"><source src="assets/fuck-off/clips/orbs.mp4" type="video/mp4"></video><button class="sound" type="button" aria-pressed="false" aria-label="Sound: Take the orbs">♪</button></div>
+      <figcaption><strong>Take the orbs</strong><span>Fly over one to take it for your side.</span></figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ================= Fleet ================= -->
+<section class="band fleet" id="fleet" aria-labelledby="fleet-title">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="kicker pixel">The fleet</p>
+      <h2 id="fleet-title">Eight ships. Pick your problem.</h2>
+      <p>Ships 1 to 4 fly for Team 1, ships 5 to 8 for Team 2. Change ship, and side, whenever the pub lets you.</p>
+    </div>
+
+    <div class="teams">
+      <div class="team reveal">
+        <h3 class="team-name pixel"><span>Team 1</span></h3>
+        <div class="ships">
+          <article class="ship" style="--ship:#e5bc47">
+            <img src="assets/fuck-off/ships/kestrel.png" alt="" width="32" height="32">
+            <div><h4>Kestrel</h4><p class="ship-line">Light, quick and cheap to shoot.</p>
+            <ul><li>850 energy, the lightest hull</li><li>Turns 0.75 times a second</li><li>Two guns, 25 energy a shot</li><li>Four rockets</li></ul></div>
+          </article>
+          <article class="ship" style="--ship:#d8a43d">
+            <img src="assets/fuck-off/ships/shrike.png" alt="" width="32" height="32">
+            <div><h4>Shrike</h4><p class="ship-line">Big guns, no bombs.</p>
+            <ul><li>1200 energy</li><li>Level 3 guns</li><li>A repel</li><li>No bombs at all</li></ul></div>
+          </article>
+          <article class="ship" style="--ship:#62a365">
+            <img src="assets/fuck-off/ships/mantis.png" alt="" width="32" height="32">
+            <div><h4>Mantis</h4><p class="ship-line">The fastest bombs in the fleet.</p>
+            <ul><li>Level 3 bombs at 600 px/s</li><li>Up to four mines</li><li>Weak, slow guns</li></ul></div>
+          </article>
+          <article class="ship" style="--ship:#b4ba73">
+            <img src="assets/fuck-off/ships/bastion.png" alt="" width="32" height="32">
+            <div><h4>Bastion</h4><p class="ship-line">The toughest hull.</p>
+            <ul><li>1250 energy, the most</li><li>EMP bombs stop recharge</li><li>Ties the Swift for top speed</li></ul></div>
+          </article>
+        </div>
+      </div>
+      <div class="team reveal">
+        <h3 class="team-name pixel"><span>Team 2</span></h3>
+        <div class="ships">
+          <article class="ship" style="--ship:#e0685b">
+            <img src="assets/fuck-off/ships/swift.png" alt="" width="32" height="32">
+            <div><h4>Swift</h4><p class="ship-line">The quickest turn in the fleet.</p>
+            <ul><li>Turns 0.87 times a second</li><li>The fastest recharge</li><li>Ties the Bastion for top speed</li></ul></div>
+          </article>
+          <article class="ship" style="--ship:#a9a1d4">
+            <img src="assets/fuck-off/ships/wraith.png" alt="" width="32" height="32">
+            <div><h4>Wraith</h4><p class="ship-line">The cheapest shots of the big guns.</p>
+            <ul><li>Level 3 guns, 25 energy a shot</li><li>1200 energy and a repel</li><li>The slowest recharge</li></ul></div>
+          </article>
+          <article class="ship" style="--ship:#b892dd">
+            <img src="assets/fuck-off/ships/anvil.png" alt="" width="32" height="32">
+            <div><h4>Anvil</h4><p class="ship-line">EMP bombs on a budget.</p>
+            <ul><li>EMP bombs at 270 energy</li><li>Level 3 guns</li><li>Two mines and a decoy</li></ul></div>
+          </article>
+          <article class="ship" style="--ship:#aaa1c9">
+            <img src="assets/fuck-off/ships/hammerhead.png" alt="" width="32" height="32">
+            <div><h4>Hammerhead</h4><p class="ship-line">Level 3 bombs, slow to turn.</p>
+            <ul><li>Level 3 bombs</li><li>A burst and four rockets</li><li>Turns 0.37 times a second</li></ul></div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= Pub ================= -->
+<section class="band pub" id="pub" aria-labelledby="pub-title">
+  <div class="wrap split split-pub">
+    <div class="split-copy reveal">
+      <p class="kicker pixel">The pub</p>
+      <h2 id="pub-title">Hold every orb.<br><em>For three whole minutes.</em></h2>
+      <p>Two sides fight over the orbs inside the arena. Fly over one to take it for your side. Hold all of them for three minutes and the pub is won, and the next match starts on the next map.</p>
+      <p>The pilots are bots, and they are characters: each has a name, a personality, a mood, memories, grudges and a skill that grows. They chat in their own voice and remember who killed them. They are always marked as bots.</p>
+    </div>
+    <div class="chatlog pixel reveal" aria-label="Chat from a pub">
+      <p class="cl-kill">@zorb_pyro destroyed by @SaltyWalrus</p>
+      <p class="cl-kill">@angry_jackal destroyed by @Rustfalcon3</p>
+      <p><span class="cl-name">@Jackal173&gt;</span> who has the orbs right now?</p>
+      <p><span class="cl-name">@space_viper&gt;</span> Thanks for the kill Toaster419 man.</p>
+      <p><span class="cl-name">@pyro60&gt;</span> wow ty jo</p>
+      <p class="cl-kill">@vex_krill destroyed by @Captainjackal9</p>
+      <p><span class="cl-name">@zorb_pyro&gt;</span> how do i attach to someone</p>
+      <p><span class="cl-name">@xXWizardXx&gt;</span> that was a tax on stupidity and i paid it</p>
+      <p><span class="cl-name">@SaltyWalrus&gt;</span> i win</p>
+      <p><span class="cl-name">@Jackal173&gt;</span> push the orbs together dude</p>
+      <p class="cl-cursor"><span class="cl-you">&gt;</span> <span class="caret" aria-hidden="true"></span></p>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <h3 class="maps-title reveal">The maps</h3>
+    <div class="maps">
+      <article class="map reveal"><img src="assets/fuck-off/maps/hollow.jpg" alt="Walls and orbs of The Hollow" loading="lazy" width="540" height="960"><div class="map-copy"><h4>The Hollow</h4><p>The default pub map. Two ways in: the Throat, short and narrow with doors, and the Dock, wide and straight with a gun gallery on either side.</p></div></article>
+      <article class="map reveal"><img src="assets/fuck-off/maps/compass.jpg" alt="The Reliquary sector of The Compass" loading="lazy" width="540" height="960"><div class="map-copy"><h4>The Compass</h4><p>A station of four sectors, the Guns, the Hangar, the Warren and the Reliquary, that all open on the Hub in the middle.</p></div></article>
+      <article class="map reveal"><img src="assets/fuck-off/maps/bulwark.jpg" alt="Rooms and lanes of The Bulwark" loading="lazy" width="540" height="960"><div class="map-copy"><h4>The Bulwark</h4><p>The Trench: three narrow lanes, and only the middle one goes through. The Twins: two wide tunnels on the far side.</p></div></article>
+      <article class="map reveal"><img src="assets/fuck-off/maps/drift.jpg" alt="Rocks in the open space of The Drift" loading="lazy" width="540" height="960"><div class="map-copy"><h4>The Drift</h4><p>Free for all. Open space, rocks, no sides and no orbs. Every pilot for themselves.</p></div></article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= Tutorial ================= -->
+<section class="band roast" id="tutorial" aria-labelledby="roast-title">
+  <div class="wrap roast-inner">
+    <div class="slab slab-a reveal pixel" aria-hidden="true">Space has no brakes. Neither do you.</div>
+    <h2 id="roast-title" class="reveal">The tutorial <em>fights back.</em></h2>
+    <p class="reveal">A narrator teaches you to fly, one lesson at a time, and roasts your flying the whole way. Then comes the final boss: the tutorial itself. You need one kill. It needs five.</p>
+    <div class="slab slab-b reveal pixel" aria-hidden="true">The final boss is the tutorial. Yes, it's personal.</div>
+    <a class="btn btn-ink btn-big reveal" href="https://play.7antsgames.com/?tutorial">Get roasted</a>
+    <p class="fine reveal">Swears a lot. The "Mild language in chat" setting tones it down.</p>
+  </div>
+</section>
+
+<!-- ================= Final CTA ================= -->
+<section class="band launch" aria-labelledby="launch-title">
+  <div class="wrap launch-inner reveal">
+    <img class="launch-ship" src="assets/fuck-off/ships/kestrel.png" alt="" width="32" height="32">
+    <h2 id="launch-title">Stop reading.<br><em>Start drifting.</em></h2>
+    <div class="cta-row cta-center">
+      <a class="btn btn-gold btn-big" href="https://play.7antsgames.com/?connect"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4.5v15l12-7.5z"/></svg>Play online</a>
+      <a class="btn btn-ghost" href="https://play.7antsgames.com/?mode=duel">Duel a bot offline</a>
+    </div>
+    <p class="keys"><span>Runs in Chrome, Edge and Firefox on the desktop.</span> No download.</p>
+  </div>
+</section>
+
+<!-- ================= Slot Theory ================= -->
+<section class="slot" id="slot-theory" aria-labelledby="st-title">
+  <div class="slot-grid-bg" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="st-head reveal">
+      <p class="kicker st-kicker">Also from 7 Ants Games · On Steam</p>
+      <h2 id="st-title"><img class="st-logo" src="assets/slot-theory/logo.png" alt="Slot Theory" width="1100" height="148"></h2>
+      <p class="st-tag">A tower defense with a drafting twist.</p>
+    </div>
+
+    <div class="st-body">
+      <div class="st-copy reveal">
+        <p>Before each of 20 waves you pick one card from five: a new tower, or an upgrade for one you already own. Then the wave runs itself. No clicking during combat, no economy to manage. Just the build you drafted and whatever comes at you.</p>
+        <p>Picks are permanent. Wave 20 ends in a boss duel with the Breach Colossus. Kill it and the sector holds.</p>
+        <ul class="st-features">
+          <li><b>1 of 5</b> cards drafted every wave</li>
+          <li><b>4 campaigns</b>, 16 stages of escalating mandates</li>
+          <li><b>Daily Rift</b>: one seeded challenge a day, one attempt</li>
+          <li><b>Co-op</b> for 2 to 4 commanders on one lane</li>
+          <li><b>Map editor</b> and Steam Workshop</li>
+          <li><b>14 languages</b></li>
+        </ul>
+        <div class="cta-row">
+          <a class="btn btn-steam btn-big" href="https://store.steampowered.com/app/4523160/Slot_Theory/">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="15.5" cy="9" r="3" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="8.5" cy="15.5" r="2.2"/><path d="M8.5 15.5 13.5 10.5" stroke="currentColor" stroke-width="2"/></svg>
+            Slot Theory on Steam
+          </a>
+        </div>
+        <p class="fine">Windows on Steam. Android version in closed testing.</p>
+      </div>
+
+      <div class="st-gallery reveal" role="list" aria-label="Slot Theory screenshots">
+        <button class="shot shot-big" type="button" role="listitem" data-full="assets/slot-theory/03_nyx7_bass_drop.jpg" data-caption="Nyx-7 and her Bass Drop"><img src="assets/slot-theory/03_nyx7_bass_drop.thumb.jpg" alt="Nyx-7's Bass Drop ability over a spiral lane" loading="lazy" width="640" height="360"></button>
+        <button class="shot" type="button" role="listitem" data-full="assets/slot-theory/02_choose_your_tower.jpg" data-caption="Wave 5: choose one of five towers"><img src="assets/slot-theory/02_choose_your_tower.thumb.jpg" alt="The draft: five tower cards to choose from" loading="lazy" width="640" height="360"></button>
+        <button class="shot" type="button" role="listitem" data-full="assets/slot-theory/01_breach_aegis.jpg" data-caption="Wave 20 against the Breach Aegis"><img src="assets/slot-theory/01_breach_aegis.thumb.jpg" alt="A crossing lane at wave 20 with the Breach Aegis boss" loading="lazy" width="640" height="360"></button>
+        <button class="shot" type="button" role="listitem" data-full="assets/slot-theory/05_astra_singularity.jpg" data-caption="Astra's Singularity"><img src="assets/slot-theory/05_astra_singularity.thumb.jpg" alt="Astra's Singularity pulling enemies together" loading="lazy" width="640" height="360"></button>
+        <button class="shot" type="button" role="listitem" data-full="assets/slot-theory/07_detonator_chain_explosions.jpg" data-caption="Detonator: chain explosions"><img src="assets/slot-theory/07_detonator_chain_explosions.thumb.jpg" alt="Chain explosions along the lane after a Detonate" loading="lazy" width="640" height="360"></button>
+        <button class="shot shot-big" type="button" role="listitem" data-full="assets/slot-theory/10_warden_lockdown.jpg" data-caption="Warden's Lockdown"><img src="assets/slot-theory/10_warden_lockdown.thumb.jpg" alt="Warden's Lockdown freezing fourteen enemies" loading="lazy" width="640" height="360"></button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= Studio ================= -->
+<section class="band studio" id="studio" aria-labelledby="studio-title">
+  <div class="wrap studio-inner reveal">
+    <svg class="studio-mark" viewBox="0 0 32 32" aria-hidden="true"><path d="M7 6h18l-9 21" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linejoin="round"/><circle cx="23.5" cy="21" r="2.6"/><circle cx="26.8" cy="25.6" r="2"/><circle cx="20.6" cy="26.4" r="1.6"/></svg>
+    <h2 id="studio-title">7 Ants Games</h2>
+    <p>A small studio with two games you can play right now and a lab full of prototypes.</p>
+    <div class="studio-links">
+      <a class="btn btn-ghost" href="https://dextrome.github.io/prototype-archive/">The Prototype Archive</a>
+      <a class="btn btn-ghost" href="mailto:support@7antsgames.com">support@7antsgames.com</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <span>© 2026 7 Ants Games</span>
+  <span>No cookies, no trackers. Fonts: Silkscreen and Space Grotesk (SIL Open Font License).</span>
+  <a href="#top">Back to the top ↑</a>
+</footer>
+
+<dialog class="lightbox" id="lightbox" aria-labelledby="lightbox-caption">
+  <button class="lb-close" type="button" id="lightbox-close" aria-label="Close screenshot">×</button>
+  <img id="lightbox-img" alt="">
+  <p id="lightbox-caption"></p>
+</dialog>
+</body>
+</html>
