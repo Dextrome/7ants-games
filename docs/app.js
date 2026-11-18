@@ -104,7 +104,7 @@
   const THRUST = 320, MAX_SPEED = 430, BOUNCE = 0.6;
   const ship = { x: W * 0.3, y: H * 0.6, vx: 60, vy: -40, a: 0.6, thrust: false };
   const target = { x: W * 0.7, y: H * 0.4 };
-  let pointerAt = -1e9, last = 0, t = 0, visible = true;
+  let pointerAt = -1e9, last = 0, t = 0, visible = true, running = false;
   const sparks = [];
   const stars = Array.from({ length: 90 }, () => ({ x: Math.random() * W, y: Math.random() * H, r: Math.random() < 0.15 ? 2 : 1, p: Math.random() * 6 }));
 
@@ -113,13 +113,14 @@
     target.x = (e.clientX - r.left) * (W / r.width);
     target.y = (e.clientY - r.top) * (H / r.height);
     pointerAt = t;
+    run();
   }
   canvas.addEventListener("pointermove", pointer);
   canvas.addEventListener("pointerdown", pointer);
 
   function step(dt) {
     t += dt;
-    if (t - pointerAt > 2.5) {  // nobody steering: the autopilot picks spots to overshoot
+    if (!reduced && t - pointerAt > 2.5) {  // nobody steering: the autopilot picks spots to overshoot
       target.x = W / 2 + Math.cos(t * 0.45) * W * 0.34;
       target.y = H / 2 + Math.sin(t * 0.8) * H * 0.3;
     }
@@ -199,20 +200,25 @@
     last = now;
     step(dt);
     draw();
-    if (visible) requestAnimationFrame(frame);
+    // With reduced motion the ship only flies while someone is steering it.
+    running = visible && !(reduced && t - pointerAt > 2.5);
+    if (running) requestAnimationFrame(frame);
   }
 
-  if (reduced) {
-    sprite.onload = draw;
-    draw();
-    return;
+  function run() {
+    if (running || !visible) return;
+    running = true;
+    last = performance.now();
+    requestAnimationFrame(frame);
   }
+
+  sprite.onload = draw;
+  draw();
   if ("IntersectionObserver" in window) {
     new IntersectionObserver((entries) => {
-      const was = visible;
       visible = entries[0].isIntersecting;
-      if (visible && !was) { last = performance.now(); requestAnimationFrame(frame); }
+      if (!reduced) run();
     }).observe(canvas);
   }
-  requestAnimationFrame((now) => { last = now; frame(now); });
+  if (!reduced) run();
 })();
