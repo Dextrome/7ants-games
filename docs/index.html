@@ -136,13 +136,13 @@
       <p class="kicker pixel">The fleet</p>
       <h2 id="fleet-title">Eight ships. Pick your problem.</h2>
       <p>Ships 1 to 4 fly for Team 1, ships 5 to 8 for Team 2. Change ship, and side, whenever the pub lets you.</p>
-      <p class="fleet-key"><span class="key-bar" aria-hidden="true"></span>The real numbers from the game. Bars compare the eight ships: fuller and greener is better, so on costs and reload, less fills the bar.</p>
+      <p class="fleet-key"><span class="key-bar" aria-hidden="true"></span>Bars compare the eight ships. Fuller and greener is better, so on costs and reload, less fills the bar.</p>
     </div>
 
     <div class="teams">
       <!-- fleet:start (written by tools/ship_stats.py) -->
       <div class="team reveal">
-        <h3 class="team-name pixel"><span>Team 1</span></h3>
+        <h3 class="team-name pixel"><span>Team 1</span><span class="swipe-hint" aria-hidden="true">Swipe &gt;</span></h3>
         <div class="ships">
           <article class="ship" style="--ship:#c6ccd8">
             <div class="ship-head">
@@ -151,28 +151,28 @@
             </div>
             <h5 class="pixel">Flight</h5>
             <dl class="spec">
-              <div class="stat" style="--v:0.27"><dt>Energy</dt><dd><span class="bar" aria-hidden="true"><i></i></span><b>850</b></dd></div>
-              <div class="stat" style="--v:0.60"><dt>Recharge</dt><dd><span class="bar" aria-hidden="true"><i></i></span><b>225/s</b></dd></div>
-              <div class="stat" style="--v:0.48"><dt>Top speed</dt><dd><span class="bar" aria-hidden="true"><i></i></span><b>300 px/s</b></dd></div>
-              <div class="stat" style="--v:1.00"><dt>Boost speed</dt><dd><span class="bar" aria-hidden="true"><i></i></span><b>600 px/s</b></dd></div>
-              <div class="stat" style="--v:0.64"><dt>Thrust</dt><dd><span class="bar" aria-hidden="true"><i></i></span><b>190 px/s²</b></dd></div>
-              <div class="stat" style="--v:0.80"><dt>Turn rate</dt><dd><span class="bar" aria-hidden="true"><i></i></span><b>269°/s</b></dd></div>
-              <div class="stat" style="--v:0.21"><dt>Boost cost</dt><dd><span class="bar" aria-hidden="true"><i></i></span><b>675/s</b></dd></div>
+              <div class="stat" style="--v:0.27"><dt>Energy</dt><dd><span class="bar" role="img" aria-label="27 out of 100"><i></i></span></dd></div>
+              <div class="stat" style="--v:0.60"><dt>Recharge</dt><dd><span class="bar" role="img" aria-label="60 out of 100"><i></i></span></dd></div>
+              <div class="stat" style="--v:0.48"><dt>Top speed</dt><dd><span class="bar" role="img" aria-label="48 out of 100"><i></i></span></dd></div>
+              <div class="stat" style="--v:1.00"><dt>Boost speed</dt><dd><span class="bar" role="img" aria-label="100 out of 100"><i></i></span></dd></div>
+              <div class="stat" style="--v:0.64"><dt>Thrust</dt><dd><span class="bar" role="img" aria-label="64 out of 100"><i></i></span></dd></div>
+              <div class="stat" style="--v:0.80"><dt>Turn rate</dt><dd><span class="bar" role="img" aria-label="80 out of 100"><i></i></span></dd></div>
+              <div class="stat" style="--v:0.21"><dt>Boost cost</dt><dd><span class="bar" role="img" aria-label="21 out of 100"><i></i></span></dd></div>
             </dl>
             <h5 class="pixel">Guns</h5>
             <dl class="spec">
-              <div class="stat" style="--v:0.74"><dt>Damage</dt><dd><span class="bar" aria-hidden="true"><i></i></span><b>2 × 167</b></dd></div>
-              <div class="stat" style="--v:0.44"><dt>Fire rate</dt><dd><span class="bar" aria-hidden="true"><i></i></span><b>5.6/s</b></dd></div>
-              <div class="stat" style="--v:1.00"><dt>Bullet speed</dt><dd><span class="bar" aria-hidden="true"><i></i></span><b>350 px/s</b></dd></div>
-              <div class="stat" style="--v:1.00"><dt>Shot cost</dt><dd><span class="bar" aria-hidden="true"><i></i></span><b>50</b></dd></div>
+              <div class="stat" style="--v:0.74"><dt>Damage</dt><dd><span class="bar" role="img" aria-label="74 out of 100"><i></i></span></dd></div>
+              <div class="stat" style="--v:0.44"><dt>Fire rate</dt><dd><span class="bar" role="img" aria-label="44 out of 100"><i></i></span></dd></div>
+              <div class="stat" style="--v:1.00"><dt>Bullet speed</dt><dd><span class="bar" role="img" aria-label="100 out of 100"><i></i></span></dd></div>
+              <div class="stat" style="--v:1.00"><dt>Shot cost</dt><dd><span class="bar" role="img" aria-label="100 out of 100"><i></i></span></dd></div>
             </dl>
-            <h5 class="pixel">Bombs</h5>
+            <h5 class="pixel">Bombs<span class="h-none"> None</span></h5>
             <dl class="spec">
-              <div class="stat stat-none"><dt>Damage</dt><dd><span class="bar" aria-hidden="true"></span><b>None</b></dd></div>
-              <div class="stat stat-none"><dt>Blast radius</dt><dd><span class="bar" aria-hidden="true"></span><b>None</b></dd></div>
-              <div class="stat stat-none"><dt>Bomb speed</dt><dd><span class="bar" aria-hidden="true"></span><b>None</b></dd></div>
-              <div class="stat stat-none"><dt>Bomb cost</dt><dd><span class="bar" aria-hidden="true"></span><b>None</b></dd></div>
-              <div class="stat stat-none"><dt>Reload</dt><dd><span class="bar" aria-hidden="true"></span><b>None</b></dd></div>
+              <div class="stat stat-none"><dt>Damage</dt><dd><span class="bar" role="img" aria-label="None"></span></dd></div>
+              <div class="stat stat-none"><dt>Blast radius</dt><dd><span class="bar" role="img" aria-label="None"></span></dd></div>
+              <div class="stat stat-none"><dt>Bomb speed</dt><dd><span class="bar" role="img" aria-label="None"></span></dd></div>
+              <div class="stat stat-none"><dt>Bomb cost</dt><dd><span class="bar" role="img" aria-label="None"></span></dd></div>
+              <div class="stat stat-none"><dt>Reload</dt><dd><span class="bar" role="img" aria-label="None"></span></dd></div>
             </dl>
             <ul class="items"><li>4 rockets</li><li>1 portal</li></ul>
           </article>
@@ -183,28 +183,28 @@
             </div>
             <h5 class="pixel">Flight</h5>
             <dl class="spec">
-              <div class="stat" style="--v:0.91"><dt>Energy</dt><dd><span class="bar" aria-hidden="true"><i></i></span><b>1200</b></dd></div>
-              <div class="stat" style="--v:0.40"><dt>Recharge</dt><dd><span class="bar" aria-hidden="true"><i></i></span><b>200/s</b></dd></div>
-              <div class="stat" style="--v:0.71"><dt>Top speed</dt><dd><span class="bar" aria-hidden="true"><i></i></span><b>350 px/s</b></dd></div>
-              <div class="stat" style="--v:1.00"><dt>Boost speed</dt><dd><span class="bar" aria-hidden="true"><i></i></span><b>600 px/s</b></dd></div>
-              <div class="stat" style="--v:0.27"><dt>Thrust</dt><dd><span class="bar" aria-hidden="true"><i></i></span><b>150 px/s²</b></dd></div>
-              <div class="stat" style="--v:0.60"><dt>Turn rate</dt><dd><span class="bar" aria-hidden="true"><i></i></span><b>224°/s</b></dd></div>
-              <div class="stat" style="--v:1.00"><dt>Boost cost</dt><dd><span class="bar" aria-hidden="true"><i></i></span><b>200/s</b></dd></div>
+              <div class="stat" style="--v:0.91"><dt>Energy</dt><dd><span class="bar" role="img" aria-label="91 out of 100"><i></i></span></dd></div>
+              <div class="stat" style="--v:0.40"><dt>Recharge</dt><dd><span class="bar" role="img" aria-label="40 out of 100"><i></i></span></dd></div>
+              <div class="stat" style="--v:0.71"><dt>Top speed</dt><dd><span class="bar" role="img" aria-label="71 out of 100"><i></i></span></dd></div>
+              <div class="stat" style="--v:1.00"><dt>Boost speed</dt><dd><span class="bar" role="img" aria-label="100 out of 100"><i></i></span></dd></div>
+              <div class="stat" style="--v:0.27"><dt>Thrust</dt><dd><span class="bar" role="img" aria-label="27 out of 100"><i></i></span></dd></div>
+              <div class="stat" style="--v:0.60"><dt>Turn rate</dt><dd><span class="bar" role="img" aria-label="60 out of 100"><i></i></span></dd></div>
+              <div class="stat" style="--v:1.00"><dt>Boost cost</dt><dd><span class="bar" role="img" aria-label="100 out of 100"><i></i></span></dd></div>
             </dl>
             <h5 class="pixel">Guns</h5>
             <dl class="spec">
-              <div class="stat" style="--v:1.00"><dt>Damage</dt><dd><span class="bar" aria-hidden="true"><i></i></span><b>2 × 200</b></dd></div>
-              <div class="stat" style="--v:0.35"><dt>Fire rate</dt><dd><span class="bar" aria-hidden="true"><i></i></span><b>4.8/s</b></dd></div>
-              <div class="stat" style="--v:1.00"><dt>Bullet speed</dt><dd><span class="bar" aria-hidden="true"><i></i></span><b>350 px/s</b></dd></div>
-              <div class="stat" style="--v:0.20"><dt>Shot cost</dt><dd><span class="bar" aria-hidden="true"><i></i></span><b>90</b></dd></div>
+              <div class="stat" style="--v:1.00"><dt>Damage</dt><dd><span class="bar" role="img" aria-label="100 out of 100"><i></i></span></dd></div>
+              <div class="stat" style="--v:0.35"><dt>Fire rate</dt><dd><span class="bar" role="img" aria-label="35 out of 100"><i></i></span></dd></div>
+              <div class="stat" style="--v:1.00"><dt>Bullet speed</dt><dd><span class="bar" role="img" aria-label="100 out of 100"><i></i></span></dd></div>
+              <div class="stat" style="--v:0.20"><dt>Shot cost</dt><dd><span class="bar" role="img" aria-label="20 out of 100"><i></i></span></dd></div>
             </dl>
-            <h5 class="pixel">Bombs</h5>
+            <h5 class="pixel">Bombs<span class="h-none"> None</span></h5>
             <dl class="spec">
-              <div class="stat stat-none"><dt>Damage</dt><dd><span class="bar" aria-hidden="true"></span><b>None</b></dd></div>
-              <div class="stat stat-none"><dt>Blast radius</dt><dd><span class="bar" aria-hidden="true"></span><b>None</b></dd></div>
-              <div class="stat stat-none"><dt>Bomb speed</dt><dd><span class="bar" aria-hidden="true"></span><b>None</b></dd></div>
-              <div class="stat stat-none"><dt>Bomb cost</dt><dd><span class="bar" aria-hidden="true"></span><b>None</b></dd></div>
-              <div class="stat stat-none"><dt>Reload</dt><dd><span class="bar" aria-hidden="true"></span><b>None</b></dd></div>
+              <div class="stat stat-none"><dt>Damage</dt><dd><span class="bar" role="img" aria-label="None"></span></dd></div>
+              <div class="stat stat-none"><dt>Blast radius</dt><dd><span class="bar" role="img" aria-label="None"></span></dd></div>
+              <div class="stat stat-none"><dt>Bomb speed</dt><dd><span class="bar" role="img" aria-label="None"></span></dd></div>
+              <div class="stat stat-none"><dt>Bomb cost</dt><dd><span class="bar" role="img" aria-label="None"></span></dd></div>
+              <div class="stat stat-none"><dt>Reload</dt><dd><span class="bar" role="img" aria-label="None"></span></dd></div>
             </dl>
             <ul class="items"><li>3 rockets</li><li>1 repel</li><li>1 portal</li></ul>
           </article>
@@ -215,28 +215,28 @@
             </div>
             <h5 class="pixel">Flight</h5>
             <dl class="spec">
-              <div class="stat" style="--v:0.45"><dt>Energy</dt><dd><span class="bar" aria-hidden="true"><i></i></span><b>950</b></dd></div>
-              <div class="stat" style="--v:0.32"><dt>Recharge</dt><dd><span class="bar" aria-hidden="true"><i></i></span><b>190/s</b></dd></div>
-              <div class="stat" style="--v:0.24"><dt>Top speed</dt><dd><span class="bar" aria-hidden="true"><i></i></span><b>250 px/s</b></dd></div>
-              <div class="stat" style="--v:1.00"><dt>Boost speed</dt><dd><span class="bar" aria-hidden="true"><i></i></span><b>600 px/s</b></dd></div>
-              <div class="stat" style="--v:0.27"><dt>Thrust</dt><dd><span class="bar" aria-hidden="true"><i></i></span><b>150 px/s²</b></dd></div>
-              <div class="stat" style="--v:0.30"><dt>Turn rate</dt><dd><span class="bar" aria-hidden="true"><i></i></span><b>158°/s</b></dd></div>
-              <div class="stat" style="--v:0.33"><dt>Boost cost</dt><dd><span class="bar" aria-hidden="true"><i></i></span><b>600/s</b></dd></div>
+              <div class="stat" style="--v:0.45"><dt>Energy</dt><dd><span class="bar" role="img" aria-label="45 out of 100"><i></i></span></dd></div>
+              <div class="stat" style="--v:0.32"><dt>Recharge</dt><dd><span class="bar" role="img" aria-label="32 out of 100"><i></i></span></dd></div>
+              <div class="stat" style="--v:0.24"><dt>Top speed</dt><dd><span class="bar" role="img" aria-label="24 out of 100"><i></i></span></dd></div>
+              <div class="stat" style="--v:1.00"><dt>Boost speed</dt><dd><span class="bar" role="img" aria-label="100 out of 100"><i></i></span></dd></div>
+              <div class="stat" style="--v:0.27"><dt>Thrust</dt><dd><span class="bar" role="img" aria-label="27 out of 100"><i></i></span></dd></div>
+              <div class="stat" style="--v:0.30"><dt>Turn rate</dt><dd><span class="bar" role="img" aria-label="30 out of 100"><i></i></span></dd></div>
+              <div class="stat" style="--v:0.33"><dt>Boost cost</dt><dd><span class="bar" role="img" aria-label="33 out of 100"><i></i></span></dd></div>
             </dl>
             <h5 class="pixel">Guns</h5>
             <dl class="spec">
-              <div class="stat" style="--v:0.74"><dt>Damage</dt><dd><span class="bar" aria-hidden="true"><i></i></span><b>2 × 167</b></dd></div>
-              <div class="stat" style="--v:0.17"><dt>Fire rate</dt><dd><span class="bar" aria-hidden="true"><i></i></span><b>3.3/s</b></dd></div>
-              <div class="stat" style="--v:0.25"><dt>Bullet speed</dt><dd><span class="bar" aria-hidden="true"><i></i></span><b>200 px/s</b></dd></div>
-              <div class="stat" style="--v:0.60"><dt>Shot cost</dt><dd><span class="bar" aria-hidden="true"><i></i></span><b>70</b></dd></div>
+              <div class="stat" style="--v:0.74"><dt>Damage</dt><dd><span class="bar" role="img" aria-label="74 out of 100"><i></i></span></dd></div>
+              <div class="stat" style="--v:0.17"><dt>Fire rate</dt><dd><span class="bar" role="img" aria-label="17 out of 100"><i></i></span></dd></div>
+              <div class="stat" style="--v:0.25"><dt>Bullet speed</dt><dd><span class="bar" role="img" aria-label="25 out of 100"><i></i></span></dd></div>
+              <div class="stat" style="--v:0.60"><dt>Shot cost</dt><dd><span class="bar" role="img" aria-label="60 out of 100"><i></i></span></dd></div>
             </dl>
             <h5 class="pixel">Bombs</h5>
             <dl class="spec">
-              <div class="stat" style="--v:1.00"><dt>Damage</dt><dd><span class="bar" aria-hidden="true"><i></i></span><b>700</b></dd></div>
-              <div class="stat" style="--v:1.00"><dt>Blast radius</dt><dd><span class="bar" aria-hidden="true"><i></i></span><b>120 px</b></dd></div>
-              <div class="stat" style="--v:1.00"><dt>Bomb speed</dt><dd><span class="bar" aria-hidden="true"><i></i></span><b>600 px/s</b></dd></div>
-              <div class="stat" style="--v:0.31"><dt>Bomb cost</dt><dd><span class="bar" aria-hidden="true"><i></i></span><b>360</b></dd></div>
-              <div class="stat" style="--v:1.00"><dt>Reload</dt><dd><span class="bar" aria-hidden="true"><i></i></span><b>0.8 s</b></dd></div>
+              <div class="stat" style="--v:1.00"><dt>Damage</dt><dd><span class="bar" role="img" aria-label="100 out of 100"><i></i></span></dd></div>
+              <div class="stat" style="--v:1.00"><dt>Blast radius</dt><dd><span class="bar" role="img" aria-label="100 out of 100"><i></i></span></dd></div>
+              <div class="stat" style="--v:1.00"><dt>Bomb speed</dt><dd><span class="bar" role="img" aria-label="100 out of 100"><i></i></span></dd></div>
+              <div class="stat" style="--v:0.31"><dt>Bomb cost</dt><dd><span class="bar" role="img" aria-label="31 out of 100"><i></i></span></dd></div>
+              <div class="stat" style="--v:1.00"><dt>Reload</dt><dd><span class="bar" role="img" aria-label="100 out of 100"><i></i></span></dd></div>
             </dl>
             <ul class="items"><li>4 rockets</li><li>1 burst</li><li>1 portal</li><li>4 mines</li></ul>
           </article>
@@ -247,35 +247,35 @@
             </div>
             <h5 class="pixel">Flight</h5>
             <dl class="spec">
-              <div class="stat" style="--v:1.00"><dt>Energy</dt><dd><span class="bar" aria-hidden="true"><i></i></span><b>1250</b></dd></div>
-              <div class="stat" style="--v:0.82"><dt>Recharge</dt><dd><span class="bar" aria-hidden="true"><i></i></span><b>252.5/s</b></dd></div>
-              <div class="stat" style="--v:1.00"><dt>Top speed</dt><dd><span class="bar" aria-hidden="true"><i></i></span><b>410 px/s</b></dd></div>
-              <div class="stat" style="--v:1.00"><dt>Boost speed</dt><dd><span class="bar" aria-hidden="true"><i></i></span><b>600 px/s</b></dd></div>
-              <div class="stat" style="--v:0.27"><dt>Thrust</dt><dd><span class="bar" aria-hidden="true"><i></i></span><b>150 px/s²</b></dd></div>
-              <div class="stat" style="--v:0.30"><dt>Turn rate</dt><dd><span class="bar" aria-hidden="true"><i></i></span><b>158°/s</b></dd></div>
-              <div class="stat" style="--v:0.17"><dt>Boost cost</dt><dd><span class="bar" aria-hidden="true"><i></i></span><b>700/s</b></dd></div>
+              <div class="stat" style="--v:1.00"><dt>Energy</dt><dd><span class="bar" role="img" aria-label="100 out of 100"><i></i></span></dd></div>
+              <div class="stat" style="--v:0.82"><dt>Recharge</dt><dd><span class="bar" role="img" aria-label="82 out of 100"><i></i></span></dd></div>
+              <div class="stat" style="--v:1.00"><dt>Top speed</dt><dd><span class="bar" role="img" aria-label="100 out of 100"><i></i></span></dd></div>
+              <div class="stat" style="--v:1.00"><dt>Boost speed</dt><dd><span class="bar" role="img" aria-label="100 out of 100"><i></i></span></dd></div>
+              <div class="stat" style="--v:0.27"><dt>Thrust</dt><dd><span class="bar" role="img" aria-label="27 out of 100"><i></i></span></dd></div>
+              <div class="stat" style="--v:0.30"><dt>Turn rate</dt><dd><span class="bar" role="img" aria-label="30 out of 100"><i></i></span></dd></div>
+              <div class="stat" style="--v:0.17"><dt>Boost cost</dt><dd><span class="bar" role="img" aria-label="17 out of 100"><i></i></span></dd></div>
             </dl>
             <h5 class="pixel">Guns</h5>
             <dl class="spec">
-              <div class="stat" style="--v:0.20"><dt>Damage</dt><dd><span class="bar" aria-hidden="true"><i></i></span><b>1 × 200</b></dd></div>
-              <div class="stat" style="--v:1.00"><dt>Fire rate</dt><dd><span class="bar" aria-hidden="true"><i></i></span><b>10/s</b></dd></div>
-              <div class="stat" style="--v:0.75"><dt>Bullet speed</dt><dd><span class="bar" aria-hidden="true"><i></i></span><b>300 px/s</b></dd></div>
-              <div class="stat" style="--v:0.20"><dt>Shot cost</dt><dd><span class="bar" aria-hidden="true"><i></i></span><b>90</b></dd></div>
+              <div class="stat" style="--v:0.20"><dt>Damage</dt><dd><span class="bar" role="img" aria-label="20 out of 100"><i></i></span></dd></div>
+              <div class="stat" style="--v:1.00"><dt>Fire rate</dt><dd><span class="bar" role="img" aria-label="100 out of 100"><i></i></span></dd></div>
+              <div class="stat" style="--v:0.75"><dt>Bullet speed</dt><dd><span class="bar" role="img" aria-label="75 out of 100"><i></i></span></dd></div>
+              <div class="stat" style="--v:0.20"><dt>Shot cost</dt><dd><span class="bar" role="img" aria-label="20 out of 100"><i></i></span></dd></div>
             </dl>
             <h5 class="pixel">Bombs</h5>
             <dl class="spec">
-              <div class="stat" style="--v:0.10"><dt>Damage</dt><dd><span class="bar" aria-hidden="true"><i></i></span><b>70 EMP</b></dd></div>
-              <div class="stat" style="--v:0.50"><dt>Blast radius</dt><dd><span class="bar" aria-hidden="true"><i></i></span><b>80 px</b></dd></div>
-              <div class="stat" style="--v:0.29"><dt>Bomb speed</dt><dd><span class="bar" aria-hidden="true"><i></i></span><b>350 px/s</b></dd></div>
-              <div class="stat" style="--v:0.38"><dt>Bomb cost</dt><dd><span class="bar" aria-hidden="true"><i></i></span><b>350</b></dd></div>
-              <div class="stat" style="--v:0.29"><dt>Reload</dt><dd><span class="bar" aria-hidden="true"><i></i></span><b>1.3 s</b></dd></div>
+              <div class="stat" style="--v:0.10"><dt>Damage</dt><dd><span class="bar" role="img" aria-label="10 out of 100"><i></i></span></dd></div>
+              <div class="stat" style="--v:0.50"><dt>Blast radius</dt><dd><span class="bar" role="img" aria-label="50 out of 100"><i></i></span></dd></div>
+              <div class="stat" style="--v:0.29"><dt>Bomb speed</dt><dd><span class="bar" role="img" aria-label="29 out of 100"><i></i></span></dd></div>
+              <div class="stat" style="--v:0.38"><dt>Bomb cost</dt><dd><span class="bar" role="img" aria-label="38 out of 100"><i></i></span></dd></div>
+              <div class="stat" style="--v:0.29"><dt>Reload</dt><dd><span class="bar" role="img" aria-label="29 out of 100"><i></i></span></dd></div>
             </dl>
-            <ul class="items"><li>2 rockets</li><li>1 portal</li><li>1 decoy</li><li>2 mines</li></ul>
+            <ul class="items"><li>EMP bombs</li><li>2 rockets</li><li>1 portal</li><li>1 decoy</li><li>2 mines</li></ul>
           </article>
         </div>
       </div>
       <div class="team reveal">
-        <h3 class="team-name pixel"><span>Team 2</span></h3>
+        <h3 class="team-name pixel"><span>Team 2</span><span class="swipe-hint" aria-hidden="true">Swipe &gt;</span></h3>
         <div class="ships">
           <article class="ship" style="--ship:#f0626a">
             <div class="ship-head">
@@ -284,28 +284,28 @@
             </div>
             <h5 class="pixel">Flight</h5>
             <dl class="spec">
-              <div class="stat" style="--v:0.36"><dt>Energy</dt><dd><span class="bar" aria-hidden="true"><i></i></span><b>900</b></dd></div>
-              <div class="stat" style="--v:1.00"><dt>Recharge</dt><dd><span class="bar" aria-hidden="true"><i></i></span><b>275/s</b></dd></div>
-              <div class="stat" style="--v:1.00"><dt>Top speed</dt><dd><span class="bar" aria-hidden="true"><i></i></span><b>410 px/s</b></dd></div>
-              <div class="stat" style="--v:1.00"><dt>Boost speed</dt><dd><span class="bar" aria-hidden="true"><i></i></span><b>600 px/s</b></dd></div>
-              <div class="stat" style="--v:1.00"><dt>Thrust</dt><dd><span class="bar" aria-hidden="true"><i></i></span><b>230 px/s²</b></dd></div>
-              <div class="stat" style="--v:1.00"><dt>Turn rate</dt><dd><span class="bar" aria-hidden="true"><i></i></span><b>314°/s</b></dd></div>
-              <div class="stat" style="--v:0.88"><dt>Boost cost</dt><dd><span class="bar" aria-hidden="true"><i></i></span><b>275/s</b></dd></div>
+              <div class="stat" style="--v:0.36"><dt>Energy</dt><dd><span class="bar" role="img" aria-label="36 out of 100"><i></i></span></dd></div>
+              <div class="stat" style="--v:1.00"><dt>Recharge</dt><dd><span class="bar" role="img" aria-label="100 out of 100"><i></i></span></dd></div>
+              <div class="stat" style="--v:1.00"><dt>Top speed</dt><dd><span class="bar" role="img" aria-label="100 out of 100"><i></i></span></dd></div>
+              <div class="stat" style="--v:1.00"><dt>Boost speed</dt><dd><span class="bar" role="img" aria-label="100 out of 100"><i></i></span></dd></div>
+              <div class="stat" style="--v:1.00"><dt>Thrust</dt><dd><span class="bar" role="img" aria-label="100 out of 100"><i></i></span></dd></div>
+              <div class="stat" style="--v:1.00"><dt>Turn rate</dt><dd><span class="bar" role="img" aria-label="100 out of 100"><i></i></span></dd></div>
+              <div class="stat" style="--v:0.88"><dt>Boost cost</dt><dd><span class="bar" role="img" aria-label="88 out of 100"><i></i></span></dd></div>
             </dl>
             <h5 class="pixel">Guns</h5>
             <dl class="spec">
-              <div class="stat" style="--v:0.74"><dt>Damage</dt><dd><span class="bar" aria-hidden="true"><i></i></span><b>2 × 167</b></dd></div>
-              <div class="stat" style="--v:0.38"><dt>Fire rate</dt><dd><span class="bar" aria-hidden="true"><i></i></span><b>5/s</b></dd></div>
-              <div class="stat" style="--v:0.50"><dt>Bullet speed</dt><dd><span class="bar" aria-hidden="true"><i></i></span><b>250 px/s</b></dd></div>
-              <div class="stat" style="--v:0.60"><dt>Shot cost</dt><dd><span class="bar" aria-hidden="true"><i></i></span><b>70</b></dd></div>
+              <div class="stat" style="--v:0.74"><dt>Damage</dt><dd><span class="bar" role="img" aria-label="74 out of 100"><i></i></span></dd></div>
+              <div class="stat" style="--v:0.38"><dt>Fire rate</dt><dd><span class="bar" role="img" aria-label="38 out of 100"><i></i></span></dd></div>
+              <div class="stat" style="--v:0.50"><dt>Bullet speed</dt><dd><span class="bar" role="img" aria-label="50 out of 100"><i></i></span></dd></div>
+              <div class="stat" style="--v:0.60"><dt>Shot cost</dt><dd><span class="bar" role="img" aria-label="60 out of 100"><i></i></span></dd></div>
             </dl>
-            <h5 class="pixel">Bombs</h5>
+            <h5 class="pixel">Bombs<span class="h-none"> None</span></h5>
             <dl class="spec">
-              <div class="stat stat-none"><dt>Damage</dt><dd><span class="bar" aria-hidden="true"></span><b>None</b></dd></div>
-              <div class="stat stat-none"><dt>Blast radius</dt><dd><span class="bar" aria-hidden="true"></span><b>None</b></dd></div>
-              <div class="stat stat-none"><dt>Bomb speed</dt><dd><span class="bar" aria-hidden="true"></span><b>None</b></dd></div>
-              <div class="stat stat-none"><dt>Bomb cost</dt><dd><span class="bar" aria-hidden="true"></span><b>None</b></dd></div>
-              <div class="stat stat-none"><dt>Reload</dt><dd><span class="bar" aria-hidden="true"></span><b>None</b></dd></div>
+              <div class="stat stat-none"><dt>Damage</dt><dd><span class="bar" role="img" aria-label="None"></span></dd></div>
+              <div class="stat stat-none"><dt>Blast radius</dt><dd><span class="bar" role="img" aria-label="None"></span></dd></div>
+              <div class="stat stat-none"><dt>Bomb speed</dt><dd><span class="bar" role="img" aria-label="None"></span></dd></div>
+              <div class="stat stat-none"><dt>Bomb cost</dt><dd><span class="bar" role="img" aria-label="None"></span></dd></div>
+              <div class="stat stat-none"><dt>Reload</dt><dd><span class="bar" role="img" aria-label="None"></span></dd></div>
             </dl>
             <ul class="items"><li>4 rockets</li><li>1 portal</li></ul>
           </article>
@@ -316,28 +316,28 @@
             </div>
             <h5 class="pixel">Flight</h5>
             <dl class="spec">
-              <div class="stat" style="--v:0.91"><dt>Energy</dt><dd><span class="bar" aria-hidden="true"><i></i></span><b>1200</b></dd></div>
-              <div class="stat" style="--v:0.28"><dt>Recharge</dt><dd><span class="bar" aria-hidden="true"><i></i></span><b>185/s</b></dd></div>
-              <div class="stat" style="--v:0.71"><dt>Top speed</dt><dd><span class="bar" aria-hidden="true"><i></i></span><b>350 px/s</b></dd></div>
-              <div class="stat" style="--v:1.00"><dt>Boost speed</dt><dd><span class="bar" aria-hidden="true"><i></i></span><b>600 px/s</b></dd></div>
-              <div class="stat" style="--v:0.27"><dt>Thrust</dt><dd><span class="bar" aria-hidden="true"><i></i></span><b>150 px/s²</b></dd></div>
-              <div class="stat" style="--v:0.40"><dt>Turn rate</dt><dd><span class="bar" aria-hidden="true"><i></i></span><b>179°/s</b></dd></div>
-              <div class="stat" style="--v:0.75"><dt>Boost cost</dt><dd><span class="bar" aria-hidden="true"><i></i></span><b>350/s</b></dd></div>
+              <div class="stat" style="--v:0.91"><dt>Energy</dt><dd><span class="bar" role="img" aria-label="91 out of 100"><i></i></span></dd></div>
+              <div class="stat" style="--v:0.28"><dt>Recharge</dt><dd><span class="bar" role="img" aria-label="28 out of 100"><i></i></span></dd></div>
+              <div class="stat" style="--v:0.71"><dt>Top speed</dt><dd><span class="bar" role="img" aria-label="71 out of 100"><i></i></span></dd></div>
+              <div class="stat" style="--v:1.00"><dt>Boost speed</dt><dd><span class="bar" role="img" aria-label="100 out of 100"><i></i></span></dd></div>
+              <div class="stat" style="--v:0.27"><dt>Thrust</dt><dd><span class="bar" role="img" aria-label="27 out of 100"><i></i></span></dd></div>
+              <div class="stat" style="--v:0.40"><dt>Turn rate</dt><dd><span class="bar" role="img" aria-label="40 out of 100"><i></i></span></dd></div>
+              <div class="stat" style="--v:0.75"><dt>Boost cost</dt><dd><span class="bar" role="img" aria-label="75 out of 100"><i></i></span></dd></div>
             </dl>
             <h5 class="pixel">Guns</h5>
             <dl class="spec">
-              <div class="stat" style="--v:1.00"><dt>Damage</dt><dd><span class="bar" aria-hidden="true"><i></i></span><b>2 × 200</b></dd></div>
-              <div class="stat" style="--v:0.35"><dt>Fire rate</dt><dd><span class="bar" aria-hidden="true"><i></i></span><b>4.8/s</b></dd></div>
-              <div class="stat" style="--v:1.00"><dt>Bullet speed</dt><dd><span class="bar" aria-hidden="true"><i></i></span><b>350 px/s</b></dd></div>
-              <div class="stat" style="--v:0.50"><dt>Shot cost</dt><dd><span class="bar" aria-hidden="true"><i></i></span><b>75</b></dd></div>
+              <div class="stat" style="--v:1.00"><dt>Damage</dt><dd><span class="bar" role="img" aria-label="100 out of 100"><i></i></span></dd></div>
+              <div class="stat" style="--v:0.35"><dt>Fire rate</dt><dd><span class="bar" role="img" aria-label="35 out of 100"><i></i></span></dd></div>
+              <div class="stat" style="--v:1.00"><dt>Bullet speed</dt><dd><span class="bar" role="img" aria-label="100 out of 100"><i></i></span></dd></div>
+              <div class="stat" style="--v:0.50"><dt>Shot cost</dt><dd><span class="bar" role="img" aria-label="50 out of 100"><i></i></span></dd></div>
             </dl>
-            <h5 class="pixel">Bombs</h5>
+            <h5 class="pixel">Bombs<span class="h-none"> None</span></h5>
             <dl class="spec">
-              <div class="stat stat-none"><dt>Damage</dt><dd><span class="bar" aria-hidden="true"></span><b>None</b></dd></div>
-              <div class="stat stat-none"><dt>Blast radius</dt><dd><span class="bar" aria-hidden="true"></span><b>None</b></dd></div>
-              <div class="stat stat-none"><dt>Bomb speed</dt><dd><span class="bar" aria-hidden="true"></span><b>None</b></dd></div>
-              <div class="stat stat-none"><dt>Bomb cost</dt><dd><span class="bar" aria-hidden="true"></span><b>None</b></dd></div>
-              <div class="stat stat-none"><dt>Reload</dt><dd><span class="bar" aria-hidden="true"></span><b>None</b></dd></div>
+              <div class="stat stat-none"><dt>Damage</dt><dd><span class="bar" role="img" aria-label="None"></span></dd></div>
+              <div class="stat stat-none"><dt>Blast radius</dt><dd><span class="bar" role="img" aria-label="None"></span></dd></div>
+              <div class="stat stat-none"><dt>Bomb speed</dt><dd><span class="bar" role="img" aria-label="None"></span></dd></div>
+              <div class="stat stat-none"><dt>Bomb cost</dt><dd><span class="bar" role="img" aria-label="None"></span></dd></div>
+              <div class="stat stat-none"><dt>Reload</dt><dd><span class="bar" role="img" aria-label="None"></span></dd></div>
             </dl>
             <ul class="items"><li>3 rockets</li><li>1 repel</li><li>1 portal</li></ul>
           </article>
@@ -348,30 +348,30 @@
             </div>
             <h5 class="pixel">Flight</h5>
             <dl class="spec">
-              <div class="stat" style="--v:0.73"><dt>Energy</dt><dd><span class="bar" aria-hidden="true"><i></i></span><b>1100</b></dd></div>
-              <div class="stat" style="--v:0.60"><dt>Recharge</dt><dd><span class="bar" aria-hidden="true"><i></i></span><b>225/s</b></dd></div>
-              <div class="stat" style="--v:0.71"><dt>Top speed</dt><dd><span class="bar" aria-hidden="true"><i></i></span><b>350 px/s</b></dd></div>
-              <div class="stat" style="--v:1.00"><dt>Boost speed</dt><dd><span class="bar" aria-hidden="true"><i></i></span><b>600 px/s</b></dd></div>
-              <div class="stat" style="--v:0.27"><dt>Thrust</dt><dd><span class="bar" aria-hidden="true"><i></i></span><b>150 px/s²</b></dd></div>
-              <div class="stat" style="--v:0.60"><dt>Turn rate</dt><dd><span class="bar" aria-hidden="true"><i></i></span><b>225°/s</b></dd></div>
-              <div class="stat" style="--v:0.17"><dt>Boost cost</dt><dd><span class="bar" aria-hidden="true"><i></i></span><b>700/s</b></dd></div>
+              <div class="stat" style="--v:0.73"><dt>Energy</dt><dd><span class="bar" role="img" aria-label="73 out of 100"><i></i></span></dd></div>
+              <div class="stat" style="--v:0.60"><dt>Recharge</dt><dd><span class="bar" role="img" aria-label="60 out of 100"><i></i></span></dd></div>
+              <div class="stat" style="--v:0.71"><dt>Top speed</dt><dd><span class="bar" role="img" aria-label="71 out of 100"><i></i></span></dd></div>
+              <div class="stat" style="--v:1.00"><dt>Boost speed</dt><dd><span class="bar" role="img" aria-label="100 out of 100"><i></i></span></dd></div>
+              <div class="stat" style="--v:0.27"><dt>Thrust</dt><dd><span class="bar" role="img" aria-label="27 out of 100"><i></i></span></dd></div>
+              <div class="stat" style="--v:0.60"><dt>Turn rate</dt><dd><span class="bar" role="img" aria-label="60 out of 100"><i></i></span></dd></div>
+              <div class="stat" style="--v:0.17"><dt>Boost cost</dt><dd><span class="bar" role="img" aria-label="17 out of 100"><i></i></span></dd></div>
             </dl>
             <h5 class="pixel">Guns</h5>
             <dl class="spec">
-              <div class="stat" style="--v:1.00"><dt>Damage</dt><dd><span class="bar" aria-hidden="true"><i></i></span><b>2 × 200</b></dd></div>
-              <div class="stat" style="--v:0.44"><dt>Fire rate</dt><dd><span class="bar" aria-hidden="true"><i></i></span><b>5.6/s</b></dd></div>
-              <div class="stat" style="--v:1.00"><dt>Bullet speed</dt><dd><span class="bar" aria-hidden="true"><i></i></span><b>350 px/s</b></dd></div>
-              <div class="stat" style="--v:0.20"><dt>Shot cost</dt><dd><span class="bar" aria-hidden="true"><i></i></span><b>90</b></dd></div>
+              <div class="stat" style="--v:1.00"><dt>Damage</dt><dd><span class="bar" role="img" aria-label="100 out of 100"><i></i></span></dd></div>
+              <div class="stat" style="--v:0.44"><dt>Fire rate</dt><dd><span class="bar" role="img" aria-label="44 out of 100"><i></i></span></dd></div>
+              <div class="stat" style="--v:1.00"><dt>Bullet speed</dt><dd><span class="bar" role="img" aria-label="100 out of 100"><i></i></span></dd></div>
+              <div class="stat" style="--v:0.20"><dt>Shot cost</dt><dd><span class="bar" role="img" aria-label="20 out of 100"><i></i></span></dd></div>
             </dl>
             <h5 class="pixel">Bombs</h5>
             <dl class="spec">
-              <div class="stat" style="--v:0.10"><dt>Damage</dt><dd><span class="bar" aria-hidden="true"><i></i></span><b>70 EMP</b></dd></div>
-              <div class="stat" style="--v:0.50"><dt>Blast radius</dt><dd><span class="bar" aria-hidden="true"><i></i></span><b>80 px</b></dd></div>
-              <div class="stat" style="--v:0.37"><dt>Bomb speed</dt><dd><span class="bar" aria-hidden="true"><i></i></span><b>380 px/s</b></dd></div>
-              <div class="stat" style="--v:1.00"><dt>Bomb cost</dt><dd><span class="bar" aria-hidden="true"><i></i></span><b>270</b></dd></div>
-              <div class="stat" style="--v:0.29"><dt>Reload</dt><dd><span class="bar" aria-hidden="true"><i></i></span><b>1.3 s</b></dd></div>
+              <div class="stat" style="--v:0.10"><dt>Damage</dt><dd><span class="bar" role="img" aria-label="10 out of 100"><i></i></span></dd></div>
+              <div class="stat" style="--v:0.50"><dt>Blast radius</dt><dd><span class="bar" role="img" aria-label="50 out of 100"><i></i></span></dd></div>
+              <div class="stat" style="--v:0.37"><dt>Bomb speed</dt><dd><span class="bar" role="img" aria-label="37 out of 100"><i></i></span></dd></div>
+              <div class="stat" style="--v:1.00"><dt>Bomb cost</dt><dd><span class="bar" role="img" aria-label="100 out of 100"><i></i></span></dd></div>
+              <div class="stat" style="--v:0.29"><dt>Reload</dt><dd><span class="bar" role="img" aria-label="29 out of 100"><i></i></span></dd></div>
             </dl>
-            <ul class="items"><li>3 rockets</li><li>1 portal</li><li>1 decoy</li><li>2 mines</li></ul>
+            <ul class="items"><li>EMP bombs</li><li>3 rockets</li><li>1 portal</li><li>1 decoy</li><li>2 mines</li></ul>
           </article>
           <article class="ship" style="--ship:#9a9af0">
             <div class="ship-head">
@@ -380,28 +380,28 @@
             </div>
             <h5 class="pixel">Flight</h5>
             <dl class="spec">
-              <div class="stat" style="--v:0.82"><dt>Energy</dt><dd><span class="bar" aria-hidden="true"><i></i></span><b>1150</b></dd></div>
-              <div class="stat" style="--v:0.32"><dt>Recharge</dt><dd><span class="bar" aria-hidden="true"><i></i></span><b>190/s</b></dd></div>
-              <div class="stat" style="--v:0.24"><dt>Top speed</dt><dd><span class="bar" aria-hidden="true"><i></i></span><b>250 px/s</b></dd></div>
-              <div class="stat" style="--v:0.67"><dt>Boost speed</dt><dd><span class="bar" aria-hidden="true"><i></i></span><b>500 px/s</b></dd></div>
-              <div class="stat" style="--v:0.36"><dt>Thrust</dt><dd><span class="bar" aria-hidden="true"><i></i></span><b>160 px/s²</b></dd></div>
-              <div class="stat" style="--v:0.20"><dt>Turn rate</dt><dd><span class="bar" aria-hidden="true"><i></i></span><b>134°/s</b></dd></div>
-              <div class="stat" style="--v:0.25"><dt>Boost cost</dt><dd><span class="bar" aria-hidden="true"><i></i></span><b>650/s</b></dd></div>
+              <div class="stat" style="--v:0.82"><dt>Energy</dt><dd><span class="bar" role="img" aria-label="82 out of 100"><i></i></span></dd></div>
+              <div class="stat" style="--v:0.32"><dt>Recharge</dt><dd><span class="bar" role="img" aria-label="32 out of 100"><i></i></span></dd></div>
+              <div class="stat" style="--v:0.24"><dt>Top speed</dt><dd><span class="bar" role="img" aria-label="24 out of 100"><i></i></span></dd></div>
+              <div class="stat" style="--v:0.67"><dt>Boost speed</dt><dd><span class="bar" role="img" aria-label="67 out of 100"><i></i></span></dd></div>
+              <div class="stat" style="--v:0.36"><dt>Thrust</dt><dd><span class="bar" role="img" aria-label="36 out of 100"><i></i></span></dd></div>
+              <div class="stat" style="--v:0.20"><dt>Turn rate</dt><dd><span class="bar" role="img" aria-label="20 out of 100"><i></i></span></dd></div>
+              <div class="stat" style="--v:0.25"><dt>Boost cost</dt><dd><span class="bar" role="img" aria-label="25 out of 100"><i></i></span></dd></div>
             </dl>
             <h5 class="pixel">Guns</h5>
             <dl class="spec">
-              <div class="stat" style="--v:0.74"><dt>Damage</dt><dd><span class="bar" aria-hidden="true"><i></i></span><b>2 × 167</b></dd></div>
-              <div class="stat" style="--v:0.17"><dt>Fire rate</dt><dd><span class="bar" aria-hidden="true"><i></i></span><b>3.3/s</b></dd></div>
-              <div class="stat" style="--v:0.25"><dt>Bullet speed</dt><dd><span class="bar" aria-hidden="true"><i></i></span><b>200 px/s</b></dd></div>
-              <div class="stat" style="--v:1.00"><dt>Shot cost</dt><dd><span class="bar" aria-hidden="true"><i></i></span><b>50</b></dd></div>
+              <div class="stat" style="--v:0.74"><dt>Damage</dt><dd><span class="bar" role="img" aria-label="74 out of 100"><i></i></span></dd></div>
+              <div class="stat" style="--v:0.17"><dt>Fire rate</dt><dd><span class="bar" role="img" aria-label="17 out of 100"><i></i></span></dd></div>
+              <div class="stat" style="--v:0.25"><dt>Bullet speed</dt><dd><span class="bar" role="img" aria-label="25 out of 100"><i></i></span></dd></div>
+              <div class="stat" style="--v:1.00"><dt>Shot cost</dt><dd><span class="bar" role="img" aria-label="100 out of 100"><i></i></span></dd></div>
             </dl>
             <h5 class="pixel">Bombs</h5>
             <dl class="spec">
-              <div class="stat" style="--v:1.00"><dt>Damage</dt><dd><span class="bar" aria-hidden="true"><i></i></span><b>700</b></dd></div>
-              <div class="stat" style="--v:1.00"><dt>Blast radius</dt><dd><span class="bar" aria-hidden="true"><i></i></span><b>120 px</b></dd></div>
-              <div class="stat" style="--v:0.37"><dt>Bomb speed</dt><dd><span class="bar" aria-hidden="true"><i></i></span><b>380 px/s</b></dd></div>
-              <div class="stat" style="--v:0.38"><dt>Bomb cost</dt><dd><span class="bar" aria-hidden="true"><i></i></span><b>350</b></dd></div>
-              <div class="stat" style="--v:0.29"><dt>Reload</dt><dd><span class="bar" aria-hidden="true"><i></i></span><b>1.3 s</b></dd></div>
+              <div class="stat" style="--v:1.00"><dt>Damage</dt><dd><span class="bar" role="img" aria-label="100 out of 100"><i></i></span></dd></div>
+              <div class="stat" style="--v:1.00"><dt>Blast radius</dt><dd><span class="bar" role="img" aria-label="100 out of 100"><i></i></span></dd></div>
+              <div class="stat" style="--v:0.37"><dt>Bomb speed</dt><dd><span class="bar" role="img" aria-label="37 out of 100"><i></i></span></dd></div>
+              <div class="stat" style="--v:0.38"><dt>Bomb cost</dt><dd><span class="bar" role="img" aria-label="38 out of 100"><i></i></span></dd></div>
+              <div class="stat" style="--v:0.29"><dt>Reload</dt><dd><span class="bar" role="img" aria-label="29 out of 100"><i></i></span></dd></div>
             </dl>
             <ul class="items"><li>4 rockets</li><li>1 burst</li><li>1 portal</li><li>2 mines</li></ul>
           </article>

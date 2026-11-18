@@ -49,7 +49,6 @@ ITEMS = [("InitialRocket", "rocket"), ("InitialRepel", "repel"), ("InitialBurst"
 class Stat:
     label: str
     value: Callable[[dict], Optional[float]]
-    text: Callable[[dict], str]
     empty: float
 
 
@@ -66,10 +65,6 @@ def read_config(path: Path) -> dict[str, dict[str, int]]:
     return sections
 
 
-def num(v: float, digits: int = 1) -> str:
-    return f"{round(v, digits):g}"
-
-
 def main() -> int:
     cfg = read_config(CONFIG)
     bullet, upgrade = cfg["Bullet"]["BulletDamageLevel"], cfg["Bullet"]["BulletDamageUpgrade"]
@@ -77,41 +72,34 @@ def main() -> int:
     emp_damage = bomb_damage * cfg["Bomb"]["EBombDamagePercent"] / 1000
     blast = cfg["Bomb"]["BombExplodePixels"]
 
-    def each(s: dict) -> int:
-        return bullet + upgrade * (s["InitialGuns"] - 1)
-
-    def barrels(s: dict) -> int:
-        return 2 if s["DoubleBarrel"] else 1
+    def volley(s: dict) -> int:
+        return (bullet + upgrade * (s["InitialGuns"] - 1)) * (2 if s["DoubleBarrel"] else 1)
 
     def bombs(field: Callable[[dict], float]) -> Callable[[dict], Optional[float]]:
         return lambda s: field(s) if s["InitialBombs"] else None
 
-    def bomb_hit(s: dict) -> float:
-        return emp_damage if s["EmpBomb"] else bomb_damage
-
     groups = [
         ("Flight", [
-            Stat("Energy", lambda s: s["InitialEnergy"], lambda s: str(s["InitialEnergy"]), 700),
-            Stat("Recharge", lambda s: s["InitialRecharge"] / 10, lambda s: f'{num(s["InitialRecharge"] / 10)}/s', 150),
-            Stat("Top speed", lambda s: s["InitialSpeed"] / 10, lambda s: f'{num(s["InitialSpeed"] / 10)} px/s', 200),
-            Stat("Boost speed", lambda s: s["MaximumSpeed"] / 10, lambda s: f'{num(s["MaximumSpeed"] / 10)} px/s', 300),
-            Stat("Thrust", lambda s: s["InitialThrust"] * 10, lambda s: f'{s["InitialThrust"] * 10} px/s\u00b2', 120),
-            Stat("Turn rate", lambda s: s["InitialRotation"] * 0.9, lambda s: f'{num(s["InitialRotation"] * 0.9, 0)}\u00b0/s', 90),
-            Stat("Boost cost", lambda s: s["AfterburnerEnergy"] / 10, lambda s: f'{num(s["AfterburnerEnergy"] / 10)}/s', 800),
+            Stat("Energy", lambda s: s["InitialEnergy"], 700),
+            Stat("Recharge", lambda s: s["InitialRecharge"] / 10, 150),
+            Stat("Top speed", lambda s: s["InitialSpeed"] / 10, 200),
+            Stat("Boost speed", lambda s: s["MaximumSpeed"] / 10, 300),
+            Stat("Thrust", lambda s: s["InitialThrust"] * 10, 120),
+            Stat("Turn rate", lambda s: s["InitialRotation"] * 0.9, 90),
+            Stat("Boost cost", lambda s: s["AfterburnerEnergy"] / 10, 800),
         ]),
         ("Guns", [
-            Stat("Damage", lambda s: each(s) * barrels(s), lambda s: f"{barrels(s)} \u00d7 {each(s)}", 150),
-            Stat("Fire rate", lambda s: 100 / s["BulletFireDelay"], lambda s: f'{num(100 / s["BulletFireDelay"])}/s', 2),
-            Stat("Bullet speed", lambda s: s["BulletSpeed"] / 10, lambda s: f'{num(s["BulletSpeed"] / 10)} px/s', 150),
-            Stat("Shot cost", lambda s: s["BulletFireEnergy"] * s["InitialGuns"],
-                 lambda s: str(s["BulletFireEnergy"] * s["InitialGuns"]), 100),
+            Stat("Damage", volley, 150),
+            Stat("Fire rate", lambda s: 100 / s["BulletFireDelay"], 2),
+            Stat("Bullet speed", lambda s: s["BulletSpeed"] / 10, 150),
+            Stat("Shot cost", lambda s: s["BulletFireEnergy"] * s["InitialGuns"], 100),
         ]),
         ("Bombs", [
-            Stat("Damage", bombs(bomb_hit), lambda s: f"{num(bomb_hit(s))} EMP" if s["EmpBomb"] else num(bomb_hit(s)), 0),
-            Stat("Blast radius", bombs(lambda s: blast * s["InitialBombs"]), lambda s: f'{blast * s["InitialBombs"]} px', 40),
-            Stat("Bomb speed", bombs(lambda s: s["BombSpeed"] / 10), lambda s: f'{num(s["BombSpeed"] / 10)} px/s', 250),
-            Stat("Bomb cost", bombs(lambda s: s["BombFireEnergy"]), lambda s: str(s["BombFireEnergy"]), 400),
-            Stat("Reload", bombs(lambda s: s["BombFireDelay"] / 100), lambda s: f'{num(s["BombFireDelay"] / 100)} s', 1.5),
+            Stat("Damage", bombs(lambda s: emp_damage if s["EmpBomb"] else bomb_damage), 0),
+            Stat("Blast radius", bombs(lambda s: blast * s["InitialBombs"]), 40),
+            Stat("Bomb speed", bombs(lambda s: s["BombSpeed"] / 10), 250),
+            Stat("Bomb cost", bombs(lambda s: s["BombFireEnergy"]), 400),
+            Stat("Reload", bombs(lambda s: s["BombFireDelay"] / 100), 1.5),
         ]),
     ]
 
@@ -121,13 +109,13 @@ def main() -> int:
         value = stat.value(ship)
         label = escape(stat.label)
         if value is None:
-            return (f'<div class="stat stat-none"><dt>{label}</dt><dd><span class="bar" aria-hidden="true"></span>'
-                    f'<b>None</b></dd></div>')
+            return (f'<div class="stat stat-none"><dt>{label}</dt><dd><span class="bar" role="img" '
+                    f'aria-label="None"></span></dd></div>')
         values = [v for v in map(stat.value, fleet) if v is not None]
         best = min(values) if stat.empty > max(values) else max(values)
         fill = max(0.0, min(1.0, (value - stat.empty) / (best - stat.empty)))
-        return (f'<div class="stat" style="--v:{fill:.2f}"><dt>{label}</dt><dd><span class="bar" aria-hidden="true">'
-                f'<i></i></span><b>{escape(stat.text(ship))}</b></dd></div>')
+        return (f'<div class="stat" style="--v:{fill:.2f}"><dt>{label}</dt><dd><span class="bar" role="img" '
+                f'aria-label="{round(fill * 100)} out of 100"><i></i></span></dd></div>')
 
     def card(section: str, name: str, color: str, line: str) -> str:
         ship = cfg[section]
@@ -137,11 +125,14 @@ def main() -> int:
                f'              <div><h4>{escape(name)}</h4><p class="ship-line">{escape(line)}</p></div>',
                '            </div>']
         for title, stats in groups:
-            out.append(f'            <h5 class="pixel">{title}</h5>')
+            unused = all(stat.value(ship) is None for stat in stats)
+            note = '<span class="h-none"> None</span>' if unused else ""
+            out.append(f'            <h5 class="pixel">{title}{note}</h5>')
             out.append('            <dl class="spec">')
             out += [f'              {row(stat, ship)}' for stat in stats]
             out.append('            </dl>')
-        items = [f'{ship[key]} {word}{"s" if ship[key] != 1 else ""}' for key, word in ITEMS if ship[key]]
+        items = ["EMP bombs"] if ship["EmpBomb"] else []
+        items += [f'{ship[key]} {word}{"s" if ship[key] != 1 else ""}' for key, word in ITEMS if ship[key]]
         out.append('            <ul class="items">' + "".join(f"<li>{i}</li>" for i in items) + "</ul>")
         out.append('          </article>')
         return "\n".join(out)
@@ -149,7 +140,8 @@ def main() -> int:
     blocks = []
     for team, ships in TEAMS:
         cards = "\n".join(card(*ship) for ship in ships)
-        blocks.append(f'      <div class="team reveal">\n        <h3 class="team-name pixel"><span>{team}</span></h3>\n'
+        blocks.append(f'      <div class="team reveal">\n        <h3 class="team-name pixel"><span>{team}</span>'
+                      f'<span class="swipe-hint" aria-hidden="true">Swipe &gt;</span></h3>\n'
                       f'        <div class="ships">\n{cards}\n        </div>\n      </div>')
 
     html = PAGE.read_bytes().decode("utf-8")

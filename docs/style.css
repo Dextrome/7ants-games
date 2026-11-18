@@ -199,7 +199,7 @@ h2 { font-size: clamp(38px, 5.6vw, 72px); font-weight: 700; letter-spacing: -0.0
 .fleet { background: radial-gradient(ellipse 50% 40% at 20% 10%, rgba(242, 201, 76, .06), transparent 70%), var(--bg); }
 .fleet-key { display: flex; align-items: center; gap: 12px; font-size: 15px; color: var(--dim); }
 .key-bar { flex: none; width: 72px; height: 6px; border-radius: 3px; background: linear-gradient(90deg, hsl(0 82% 50%), hsl(60 82% 50%), hsl(120 82% 42%)); }
-.teams { display: grid; grid-template-columns: 1fr; gap: 44px; }
+.teams { display: grid; grid-template-columns: minmax(0, 1fr); gap: 44px; }
 .team-name { font-size: 14px; color: var(--dim); text-transform: uppercase; margin-bottom: 14px; display: flex; align-items: center; gap: 12px; }
 .team-name::after { content: ""; flex: 1; height: 1px; background: var(--edge); }
 .ships { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; }
@@ -221,17 +221,38 @@ h2 { font-size: clamp(38px, 5.6vw, 72px); font-weight: 700; letter-spacing: -0.0
 .ship-line { color: var(--ink); font-weight: 600; font-size: 13.5px; margin: 4px 0 0; line-height: 1.3; }
 .ship h5 { position: relative; margin: 12px 0 5px; font-size: 11px; font-weight: 400; color: var(--ship); text-transform: uppercase; letter-spacing: .06em; }
 .spec { position: relative; margin: 0; display: grid; gap: 3px; }
-.stat { display: grid; grid-template-columns: 78px minmax(0, 1fr) 62px; gap: 7px; align-items: center; font-size: 12.5px; line-height: 1.45; }
+.stat { display: grid; grid-template-columns: 84px minmax(0, 1fr); gap: 10px; align-items: center; font-size: 12.5px; line-height: 1.45; }
 .stat dt { color: var(--dim); white-space: nowrap; }
-.stat dd { display: contents; }
-.stat b { font-weight: 600; color: var(--ink); text-align: right; white-space: nowrap; font-variant-numeric: tabular-nums; }
+.stat dd { margin: 0; }
 .bar { display: block; height: 6px; border-radius: 3px; background: rgba(255, 255, 255, .1); overflow: hidden; }
 /* --v is how full the bar is, 0 to 1: red when empty, yellow halfway, green when full. */
 .bar i { display: block; height: 100%; width: calc(var(--v) * 100%); min-width: 3px; border-radius: 3px; background: hsl(calc(var(--v) * 120) 82% calc(50% - var(--v) * 8%)); transform-origin: left; transition: transform 1s cubic-bezier(.2, .7, .2, 1) .15s; }
 .js .reveal:not(.in) .bar i { transform: scaleX(0); }
-.stat-none dt, .stat-none b { color: #5d6579; font-weight: 400; }
+.stat-none dt { color: #5d6579; }
+.h-none { color: #7c859b; }
+.swipe-hint { display: none; }
 .items { position: relative; list-style: none; display: flex; flex-wrap: wrap; gap: 5px; margin: auto 0 0; padding: 14px 0 0; }
 .items li { padding: 2px 8px; border-radius: 999px; border: 1px solid var(--edge); background: rgba(255, 255, 255, .03); font-size: 12px; line-height: 1.5; color: var(--ink); }
+
+/* Phones: each team is one swipeable row, the next card peeking in from the edge. */
+@media (max-width: 760px) {
+  .teams { gap: 32px; }
+  .team-name { margin-bottom: 10px; }
+  .swipe-hint { display: inline; order: 2; color: var(--gold); font-size: 12px; }
+  .ships {
+    display: flex; gap: 12px; overflow-x: auto; overscroll-behavior-x: contain;
+    margin-inline: -16px; padding: 2px 16px 8px; scroll-padding-inline: 16px;
+    scroll-snap-type: x mandatory; scrollbar-width: none;
+  }
+  .ships::-webkit-scrollbar { display: none; }
+  .ship { flex: 0 0 min(84vw, 340px); scroll-snap-align: start; padding: 14px; }
+  .ship:hover { transform: none; }
+  .ship-head { grid-template-columns: 72px minmax(0, 1fr); min-height: 76px; margin-bottom: 0; }
+  .ship img { width: 72px; height: 72px; }
+  .ship h5 { margin-top: 10px; }
+  .stat { font-size: 13px; }
+  .items { padding-top: 12px; }
+}
 
 /* Pub */
 .pub { background: linear-gradient(180deg, var(--bg), #080a12); }
