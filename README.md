@@ -6,7 +6,8 @@ The studio site: **FUCK OFF** (Mo' Mentum Mo' Problems), playable in the browser
 
 ## Open it
 
-Published with GitHub Pages from `main` → `/docs`. Preview locally by serving `docs`
+Published at [7antsgames.com](https://7antsgames.com) with GitHub Pages from `main` → `/docs`
+(`docs/CNAME`; DNS at Cloudflare: CNAME `@` and `www` → `dextrome.github.io`, DNS only). Preview locally by serving `docs`
 (`python -m http.server 8080 -d docs`). No build step, no dependencies, no cookies or
 analytics; fonts are self-hosted (Silkscreen and Space Grotesk, SIL Open Font License).
 
