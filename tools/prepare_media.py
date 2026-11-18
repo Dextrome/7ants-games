@@ -138,8 +138,8 @@ def main() -> int:
             im = Image.open(gallery / f"{shot}.png").convert("RGB")
             im.resize((1600, 900), Image.LANCZOS).save(st / f"{shot}.jpg", quality=84, optimize=True)
             im.resize((640, 360), Image.LANCZOS).save(st / f"{shot}.thumb.jpg", quality=80, optimize=True)
-        # The trailer's poster: its opening shot, so the page asks nothing of YouTube before play.
-        ff("-ss", "1.5", "-i", str(SLOT / "promo_images/trailer/slot_theory_trailer_script_20b.mp4"),
+        # The trailer's poster: a shot without captions, so the page asks nothing of YouTube before play.
+        ff("-ss", "33", "-i", str(SLOT / "promo_images/trailer/slot_theory_trailer_script_20b.mp4"),
            "-frames:v", "1", "-vf", "scale=1600:900", "-q:v", "4", str(st / "trailer-poster.jpg"))
         logo = Image.open(SLOT / "promo_images/promo/slot_theory_logo_oneline.png")
         logo.thumbnail((1100, 1100), Image.LANCZOS)

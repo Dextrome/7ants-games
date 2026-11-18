@@ -155,8 +155,7 @@ kbd { font: 600 12px/1 var(--display); padding: 4px 7px; border-radius: 6px; bor
 @keyframes ticker { to { transform: translateX(-50%); } }
 
 /* ---------- Sections ---------- */
-.kicker { font-size: 13px; color: var(--gold); text-transform: uppercase; margin-bottom: 18px; display: flex; align-items: center; gap: 12px; }
-.kicker::before { content: ""; width: 26px; height: 2px; background: currentColor; }
+.kicker { font-size: 13px; color: var(--gold); text-transform: uppercase; margin-bottom: 18px; }
 h2 { font-size: clamp(38px, 5.6vw, 72px); font-weight: 700; letter-spacing: -0.035em; margin-bottom: 24px; }
 .section-head { max-width: 46rem; margin-bottom: 48px; }
 .section-head p:not(.kicker), .split-copy p:not(.kicker) { color: #c3cad8; font-size: 18px; }
@@ -200,11 +199,9 @@ h2 { font-size: clamp(38px, 5.6vw, 72px); font-weight: 700; letter-spacing: -0.0
 
 /* Fleet */
 .fleet { background: radial-gradient(ellipse 50% 40% at 20% 10%, rgba(242, 201, 76, .06), transparent 70%), var(--bg); }
-.fleet-key { display: flex; align-items: center; gap: 12px; font-size: 15px; color: var(--dim); }
-.key-bar { flex: none; width: 72px; height: 6px; border-radius: 3px; background: linear-gradient(90deg, hsl(0 82% 50%), hsl(60 82% 50%), hsl(120 82% 42%)); }
+.section-head p.fleet-key { font-size: 15px; color: var(--dim); }
 .teams { display: grid; grid-template-columns: minmax(0, 1fr); gap: 44px; }
-.team-name { font-size: 14px; color: var(--dim); text-transform: uppercase; margin-bottom: 14px; display: flex; align-items: center; gap: 12px; }
-.team-name::after { content: ""; flex: 1; height: 1px; background: var(--edge); }
+.team-name { font-size: 14px; color: var(--dim); text-transform: uppercase; margin-bottom: 14px; display: flex; align-items: center; justify-content: space-between; gap: 12px; }
 .ships { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; }
 @media (max-width: 1120px) { .ships { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (max-width: 620px) { .ships { grid-template-columns: minmax(0, 1fr); } }
