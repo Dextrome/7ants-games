@@ -71,6 +71,26 @@
   document.getElementById("lightbox-close").addEventListener("click", () => box.close());
   box.addEventListener("click", (e) => { if (e.target === box) box.close(); });
 
+  // ---- Slot Theory trailer: nothing loads from YouTube until someone presses play ----
+  const trailer = document.getElementById("trailer");
+  if (trailer) {
+    trailer.addEventListener("click", (e) => {
+      if (e.ctrlKey || e.metaKey || e.shiftKey || e.button !== 0) return;  // a new tab, as the link asks
+      e.preventDefault();
+      const player = document.createElement("iframe");
+      player.src = "https://www.youtube-nocookie.com/embed/" + trailer.dataset.video + "?autoplay=1&rel=0&playsinline=1";
+      player.title = "Slot Theory trailer";
+      player.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
+      player.allowFullscreen = true;
+      player.referrerPolicy = "strict-origin-when-cross-origin";
+      const frame = document.createElement("div");
+      frame.className = "trailer";
+      frame.append(player);
+      trailer.replaceWith(frame);
+      player.focus();
+    });
+  }
+
   // ---- Mo' Mentum toy: a Kestrel chases the pointer, with no brakes ----
   const canvas = document.getElementById("toy");
   if (!canvas) return;
