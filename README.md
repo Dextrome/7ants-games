@@ -17,8 +17,10 @@ analytics; fonts are self-hosted (Silkscreen and Space Grotesk, SIL Open Font Li
   (`?connect` online, `?tutorial`, `?mode=duel`).
 - Styling: `docs/style.css`. Clip reel, lightbox and the Mo' Mentum toy: `docs/app.js`.
 - Media: `python tools/prepare_media.py` rebuilds `docs/assets` from the game projects
-  (FUCK OFF clips rendered by the game's own `tools/media/make_media.py`, ship sprites,
-  Slot Theory's Steam gallery). Needs ffmpeg and Pillow.
+  (FUCK OFF clips rendered by the game's own `tools/media/make_media.py`, the HD fleet drawn by
+  its `tools/art/hd_fleet.html`, Slot Theory's Steam gallery). Needs ffmpeg, Pillow and Chrome or
+  Edge. Name parts to rebuild only those: `python tools/prepare_media.py ships maps`.
+- Fleet cards: `python tools/ship_stats.py` writes them into `docs/index.html` from the game's
+  `configs/dsb.cfg`. Run it after a balance change; edit the cards there, not in the page.
 
-Ship facts on the page come from the game's clip descriptions (`configs/dsb.cfg` values).
 Copy rule: no em dashes.

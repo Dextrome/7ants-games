@@ -161,7 +161,8 @@
     ctx.save();
     ctx.translate(Math.round(ship.x), Math.round(ship.y));
     ctx.rotate(ship.a);
-    ctx.imageSmoothingEnabled = false;
+    ctx.imageSmoothingEnabled = true;
+    ctx.imageSmoothingQuality = "high";
     if (sprite.complete && sprite.naturalWidth) ctx.drawImage(sprite, -24, -24, 48, 48);
     ctx.restore();
     // Velocity vector
