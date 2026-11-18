@@ -75,6 +75,9 @@ em { font-style: normal; color: var(--gold); }
 .btn-steam svg { fill: none; }
 .btn-steam svg circle:nth-child(3) { fill: currentColor; }
 .btn-steam:hover { box-shadow: 0 0 0 6px rgba(51, 227, 201, .15), 0 16px 44px -12px rgba(196, 255, 61, .7); }
+.btn-discord { --b: transparent; color: #fff; background: #5865f2; box-shadow: 0 12px 40px -14px rgba(88, 101, 242, .9); }
+.btn-discord svg { width: 22px; height: 22px; fill: currentColor; }
+.btn-discord:hover { background: #4752c4; box-shadow: 0 0 0 6px rgba(88, 101, 242, .2); }
 .cta-row { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
 .cta-center { justify-content: center; }
 
