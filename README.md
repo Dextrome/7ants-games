@@ -21,11 +21,12 @@ Theory trailer comes from YouTube's privacy-enhanced player, loaded only when so
 | `/fuck-off/momentum-physics/` | `docs/fuck-off/momentum-physics/index.html` | Guide: how flight works |
 | `/slot-theory/` | `docs/slot-theory/index.html` | Slot Theory: trailer, gallery, how a run works, modes |
 | `/slot-theory/how-to-play/` | `docs/slot-theory/how-to-play/index.html` | Guide: a first run |
+| `/privacy/` | `docs/privacy/index.html` | Privacy notice: the online zone and this site (source: the game repo's `docs/privacy-notice.md`) |
 | (any missing URL) | `docs/404.html` | Not found, not indexed |
 
 Every page has its own title, description, canonical URL, Open Graph/Twitter tags and JSON-LD
 (`@graph`; the studio is `https://7antsgames.com/#organization`). Paths are root-relative
-(`/assets/...`). `docs/sitemap.xml` lists the five indexable pages and `docs/robots.txt` points to it:
+(`/assets/...`). `docs/sitemap.xml` lists the six indexable pages and `docs/robots.txt` points to it:
 add a new page to both. Guides state only what the games really do; check facts against the
 game before changing them.
 
