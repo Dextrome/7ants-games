@@ -107,7 +107,7 @@
   const W = canvas.width, H = canvas.height, TILE = 16;
   const speedOut = document.getElementById("toy-speed") || { textContent: "" };
   const sprite = new Image();
-  sprite.src = "/assets/fuck-off/ships/kestrel.png";  // from the site root: the toy runs on more than one page
+  sprite.src = "/assets/fuck-off/ships/kestrel.webp";  // from the site root: the toy runs on more than one page
 
   const TURN = 0.75 * Math.PI * 2;  // the Kestrel turns 0.75 times a second
   const THRUST = 320, MAX_SPEED = 430, BOUNCE = 0.6;

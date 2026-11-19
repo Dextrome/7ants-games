@@ -6,7 +6,8 @@ Sources (local, not in this repo):
   E:/SlotTheory/promo_images/   Slot Theory's Steam gallery (the 2026-11-18 captures, game 1.9.4) and logo
 
 Needs ffmpeg on PATH, Pillow and Chrome or Edge.
-Run: python tools/prepare_media.py [hero clips maps ships slot]   (default: all of them)
+Run: python tools/prepare_media.py [hero clips maps ships slot web]   (default: all of them)
+`web` only makes the WebP copies from what is already in docs/assets; run it after any other part.
 """
 from __future__ import annotations
 
@@ -40,6 +41,7 @@ REEL = [
 MAPS = [("hollow", 0.30), ("compass", 0.45), ("bulwark", 0.40), ("drift", 0.45)]
 # The game's fleet page draws each hull at 64 px in an 80 px cell; here four times that, for the web.
 SHIP_CELL, SHIP_MASTER, SHIP_OUTLINE_PX = 320, 256, 3
+SHIP_WEB = 240
 BROWSERS = [
     r"C:\Program Files\Google\Chrome\Application\chrome.exe",
     r"C:\Program Files (x86)\Google\Chrome\Application\chrome.exe",
@@ -94,7 +96,7 @@ def render_ships(out: Path) -> None:
 
 
 def main() -> int:
-    parts = set(sys.argv[1:]) or {"hero", "clips", "maps", "ships", "slot"}
+    parts = set(sys.argv[1:]) or {"hero", "clips", "maps", "ships", "slot", "web"}
     fo = OUT / "fuck-off"
     st = OUT / "slot-theory"
     for d in (fo / "clips", fo / "maps", fo / "ships", st):
@@ -151,6 +153,30 @@ def main() -> int:
         logo.thumbnail((1100, 1100), Image.LANCZOS)
         logo.save(st / "logo.png", optimize=True)
         logo.save(st / "logo.webp", quality=88, method=6)  # a quarter of the PNG; the page offers both
+
+    # WebP copies of the stills above, sized for how the pages show them (phones first). Made from
+    # the files in docs/assets, so this part runs without the game projects.
+    if "web" in parts:
+        def webp(src: Path, dst: Path, width: int | None = None, quality: int = 78) -> None:
+            im = Image.open(src)
+            im = im.convert("RGBA" if im.mode in ("RGBA", "LA", "P") else "RGB")
+            if width and im.width > width:
+                im = im.resize((width, round(im.height * width / im.width)), Image.LANCZOS)
+            im.save(dst, quality=quality, method=6)
+        webp(fo / "hero.jpg", fo / "hero.webp")
+        for name, *_ in REEL:
+            webp(fo / "clips" / f"{name}.jpg", fo / "clips" / f"{name}.webp")
+        for name, _ in MAPS:
+            webp(fo / "maps" / f"{name}.jpg", fo / "maps" / f"{name}.webp")
+        # Fleet cards show hulls at 92 px and the hero's U at most about 120 px: 240 px covers both at 2x.
+        for png in sorted((fo / "ships").glob("*.png")):
+            webp(png, png.with_suffix(".webp"), SHIP_WEB, quality=85)
+        webp(st / "logo.png", st / "logo-720.webp", 720, quality=88)
+        webp(st / "trailer-poster.jpg", st / "trailer-poster.webp")
+        webp(st / "trailer-poster.jpg", st / "trailer-poster-800.webp", 800)
+        for shot in SLOT_SHOTS:
+            webp(st / f"{shot}.thumb.jpg", st / f"{shot}.thumb.webp")
+            webp(st / f"{shot}.thumb.jpg", st / f"{shot}.thumb-400.webp", 400)
 
     total = sum(p.stat().st_size for p in OUT.rglob("*") if p.is_file())
     print(f"assets: {total / 1e6:.1f} MB")

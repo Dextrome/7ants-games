@@ -39,9 +39,14 @@ game before changing them.
   changing either, bump `?v=` where the pages include them.
 - Media: `python tools/prepare_media.py` rebuilds `docs/assets` from the game projects
   (FUCK OFF clips rendered by the game's own `tools/media/make_media.py`, the HD fleet drawn by
-  its `tools/art/hd_fleet.html`, Slot Theory's Steam gallery, the portrait hero video for phones,
-  the WebP logo). Needs ffmpeg, Pillow and Chrome or Edge. Name parts to rebuild only those:
-  `python tools/prepare_media.py ships maps`.
+  its `tools/art/hd_fleet.html`, Slot Theory's Steam gallery, the portrait hero video for phones).
+  Needs ffmpeg, Pillow and Chrome or Edge. Name parts to rebuild only those:
+  `python tools/prepare_media.py ships maps web`. The pages show WebP copies of the stills, sized
+  for phones (`-400`, `-720`, `-800` widths go in `srcset`); the `web` part makes them from the JPEG/PNG
+  files and needs only Pillow, so run it after rebuilding any other part. The homepage clip stills
+  are lazy `<img class="clip-poster">` behind each video, not `poster=`, which would load them all up front.
+- Profile icons in every footer: `docs/assets/icons/social.svg` (Simple Icons, CC0), one `<symbol>` per
+  network. The same profile URLs are the Organization `sameAs` on the homepage; change both together.
 - Share images: `python tools/make_og.py` renders `docs/assets/og/*.jpg` (1200x630) and
   `docs/assets/brand/logo.png` with Chrome or Edge and Pillow.
 - Fleet cards: `python tools/ship_stats.py` writes them into `docs/fuck-off/index.html` from the

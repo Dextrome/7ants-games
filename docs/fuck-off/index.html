@@ -24,11 +24,11 @@
 <meta name="twitter:image" content="https://7antsgames.com/assets/og/fuck-off.jpg">
 <meta name="twitter:image:alt" content="The FUCK OFF wordmark over a pub battle on The Hollow">
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
-<link rel="preload" href="/assets/fuck-off/hero.jpg" as="image" fetchpriority="high">
+<link rel="preload" href="/assets/fuck-off/hero.webp" as="image" type="image/webp" fetchpriority="high">
 <link rel="preload" href="/fonts/SpaceGrotesk-400_700.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/Silkscreen-400.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/style.css?v=2">
-<script src="/app.js?v=2" defer></script>
+<link rel="stylesheet" href="/style.css?v=3">
+<script src="/app.js?v=3" defer></script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -105,7 +105,7 @@
 
 <!-- ================= Hero ================= -->
 <section class="hero" id="top" aria-labelledby="fo-title">
-  <video class="hero-video" autoplay muted loop playsinline preload="metadata" poster="/assets/fuck-off/hero.jpg" aria-hidden="true">
+  <video class="hero-video" autoplay muted loop playsinline preload="metadata" poster="/assets/fuck-off/hero.webp" aria-hidden="true">
     <source src="/assets/fuck-off/hero.mp4" type="video/mp4" media="(prefers-reduced-motion: no-preference) and (orientation: landscape)">
     <source src="/assets/fuck-off/hero-portrait.mp4" type="video/mp4" media="(prefers-reduced-motion: no-preference) and (orientation: portrait)">
   </video>
@@ -178,7 +178,7 @@
         <div class="ships">
           <article class="ship" style="--ship:#c6ccd8">
             <div class="ship-head">
-              <img src="/assets/fuck-off/ships/kestrel.png" alt="" width="320" height="320" loading="lazy">
+              <img src="/assets/fuck-off/ships/kestrel.webp" alt="" width="240" height="240" loading="lazy">
               <div><h4>Kestrel</h4><p class="ship-line">Light, quick and cheap to shoot.</p></div>
             </div>
             <h5 class="pixel">Flight</h5>
@@ -210,7 +210,7 @@
           </article>
           <article class="ship" style="--ship:#e6a94a">
             <div class="ship-head">
-              <img src="/assets/fuck-off/ships/shrike.png" alt="" width="320" height="320" loading="lazy">
+              <img src="/assets/fuck-off/ships/shrike.webp" alt="" width="240" height="240" loading="lazy">
               <div><h4>Shrike</h4><p class="ship-line">Big guns, no bombs.</p></div>
             </div>
             <h5 class="pixel">Flight</h5>
@@ -242,7 +242,7 @@
           </article>
           <article class="ship" style="--ship:#62c384">
             <div class="ship-head">
-              <img src="/assets/fuck-off/ships/mantis.png" alt="" width="320" height="320" loading="lazy">
+              <img src="/assets/fuck-off/ships/mantis.webp" alt="" width="240" height="240" loading="lazy">
               <div><h4>Mantis</h4><p class="ship-line">The fastest bombs in the fleet.</p></div>
             </div>
             <h5 class="pixel">Flight</h5>
@@ -274,7 +274,7 @@
           </article>
           <article class="ship" style="--ship:#bcc86a">
             <div class="ship-head">
-              <img src="/assets/fuck-off/ships/bastion.png" alt="" width="320" height="320" loading="lazy">
+              <img src="/assets/fuck-off/ships/bastion.webp" alt="" width="240" height="240" loading="lazy">
               <div><h4>Bastion</h4><p class="ship-line">EMP bombs and the deepest energy.</p></div>
             </div>
             <h5 class="pixel">Flight</h5>
@@ -311,7 +311,7 @@
         <div class="ships">
           <article class="ship" style="--ship:#f0626a">
             <div class="ship-head">
-              <img src="/assets/fuck-off/ships/swift.png" alt="" width="320" height="320" loading="lazy">
+              <img src="/assets/fuck-off/ships/swift.webp" alt="" width="240" height="240" loading="lazy">
               <div><h4>Swift</h4><p class="ship-line">The quickest turn in the fleet.</p></div>
             </div>
             <h5 class="pixel">Flight</h5>
@@ -343,7 +343,7 @@
           </article>
           <article class="ship" style="--ship:#7fa9f2">
             <div class="ship-head">
-              <img src="/assets/fuck-off/ships/wraith.png" alt="" width="320" height="320" loading="lazy">
+              <img src="/assets/fuck-off/ships/wraith.webp" alt="" width="240" height="240" loading="lazy">
               <div><h4>Wraith</h4><p class="ship-line">The cheapest shots of the big guns.</p></div>
             </div>
             <h5 class="pixel">Flight</h5>
@@ -375,7 +375,7 @@
           </article>
           <article class="ship" style="--ship:#b583f2">
             <div class="ship-head">
-              <img src="/assets/fuck-off/ships/anvil.png" alt="" width="320" height="320" loading="lazy">
+              <img src="/assets/fuck-off/ships/anvil.webp" alt="" width="240" height="240" loading="lazy">
               <div><h4>Anvil</h4><p class="ship-line">EMP bombs on a budget.</p></div>
             </div>
             <h5 class="pixel">Flight</h5>
@@ -407,7 +407,7 @@
           </article>
           <article class="ship" style="--ship:#9a9af0">
             <div class="ship-head">
-              <img src="/assets/fuck-off/ships/hammerhead.png" alt="" width="320" height="320" loading="lazy">
+              <img src="/assets/fuck-off/ships/hammerhead.webp" alt="" width="240" height="240" loading="lazy">
               <div><h4>Hammerhead</h4><p class="ship-line">Level 3 bombs, slow to turn.</p></div>
             </div>
             <h5 class="pixel">Flight</h5>
@@ -471,10 +471,10 @@
   <div class="wrap">
     <h3 class="maps-title reveal">The maps</h3>
     <div class="maps">
-      <article class="map reveal"><img src="/assets/fuck-off/maps/hollow.jpg" alt="Walls and orbs of The Hollow" loading="lazy" width="540" height="960"><div class="map-copy"><h4>The Hollow</h4><p>The default pub map. Two ways in: the Throat, short and narrow with doors, and the Dock, wide and straight with a gun gallery on either side.</p></div></article>
-      <article class="map reveal"><img src="/assets/fuck-off/maps/compass.jpg" alt="The Reliquary sector of The Compass" loading="lazy" width="540" height="960"><div class="map-copy"><h4>The Compass</h4><p>A station of four sectors, the Guns, the Hangar, the Warren and the Reliquary, that all open on the Hub in the middle.</p></div></article>
-      <article class="map reveal"><img src="/assets/fuck-off/maps/bulwark.jpg" alt="Rooms and lanes of The Bulwark" loading="lazy" width="540" height="960"><div class="map-copy"><h4>The Bulwark</h4><p>The Trench: three narrow lanes, and only the middle one goes through. The Twins: two wide tunnels on the far side.</p></div></article>
-      <article class="map reveal"><img src="/assets/fuck-off/maps/drift.jpg" alt="Rocks in the open space of The Drift" loading="lazy" width="540" height="960"><div class="map-copy"><h4>The Drift</h4><p>Free for all. Open space, rocks, no sides and no orbs. Every pilot for themselves.</p></div></article>
+      <article class="map reveal"><img src="/assets/fuck-off/maps/hollow.webp" alt="Walls and orbs of The Hollow" loading="lazy" width="540" height="960"><div class="map-copy"><h4>The Hollow</h4><p>The default pub map. Two ways in: the Throat, short and narrow with doors, and the Dock, wide and straight with a gun gallery on either side.</p></div></article>
+      <article class="map reveal"><img src="/assets/fuck-off/maps/compass.webp" alt="The Reliquary sector of The Compass" loading="lazy" width="540" height="960"><div class="map-copy"><h4>The Compass</h4><p>A station of four sectors, the Guns, the Hangar, the Warren and the Reliquary, that all open on the Hub in the middle.</p></div></article>
+      <article class="map reveal"><img src="/assets/fuck-off/maps/bulwark.webp" alt="Rooms and lanes of The Bulwark" loading="lazy" width="540" height="960"><div class="map-copy"><h4>The Bulwark</h4><p>The Trench: three narrow lanes, and only the middle one goes through. The Twins: two wide tunnels on the far side.</p></div></article>
+      <article class="map reveal"><img src="/assets/fuck-off/maps/drift.webp" alt="Rocks in the open space of The Drift" loading="lazy" width="540" height="960"><div class="map-copy"><h4>The Drift</h4><p>Free for all. Open space, rocks, no sides and no orbs. Every pilot for themselves.</p></div></article>
     </div>
   </div>
 </section>
@@ -511,7 +511,7 @@
 <!-- ================= Final CTA ================= -->
 <section class="band launch" aria-labelledby="launch-title">
   <div class="wrap launch-inner reveal">
-    <img class="launch-ship" src="/assets/fuck-off/ships/kestrel.png" alt="" width="32" height="32" loading="lazy">
+    <img class="launch-ship" src="/assets/fuck-off/ships/kestrel.webp" alt="" width="32" height="32" loading="lazy">
     <h2 id="launch-title">Stop reading.<br><em>Start drifting.</em></h2>
     <div class="cta-row cta-center">
       <a class="btn btn-gold btn-big" href="https://play.7antsgames.com/?connect"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4.5v15l12-7.5z"/></svg>Play online</a>
@@ -533,6 +533,15 @@
     <a href="/slot-theory/how-to-play/">How to play Slot Theory</a>
     <a href="https://discord.com/invite/cEnnAErRvW">Discord</a>
     <a href="/privacy/">Privacy</a>
+  </nav>
+  <nav class="social" aria-label="7 Ants Games elsewhere">
+    <a href="https://discord.com/invite/cEnnAErRvW" rel="me" title="Discord" aria-label="7 Ants Games on Discord"><svg aria-hidden="true" focusable="false"><use href="/assets/icons/social.svg#discord"/></svg></a>
+    <a href="https://x.com/7antsgames" rel="me" title="X" aria-label="7 Ants Games on X"><svg aria-hidden="true" focusable="false"><use href="/assets/icons/social.svg#x"/></svg></a>
+    <a href="https://bsky.app/profile/7antsgames.bsky.social" rel="me" title="Bluesky" aria-label="7 Ants Games on Bluesky"><svg aria-hidden="true" focusable="false"><use href="/assets/icons/social.svg#bluesky"/></svg></a>
+    <a href="https://www.tiktok.com/@7antsgames" rel="me" title="TikTok" aria-label="7 Ants Games on TikTok"><svg aria-hidden="true" focusable="false"><use href="/assets/icons/social.svg#tiktok"/></svg></a>
+    <a href="https://www.instagram.com/7antsgames" rel="me" title="Instagram" aria-label="7 Ants Games on Instagram"><svg aria-hidden="true" focusable="false"><use href="/assets/icons/social.svg#instagram"/></svg></a>
+    <a href="https://www.facebook.com/7antsgames" rel="me" title="Facebook" aria-label="7 Ants Games on Facebook"><svg aria-hidden="true" focusable="false"><use href="/assets/icons/social.svg#facebook"/></svg></a>
+    <a href="https://rumble.com/c/c-7977578" rel="me" title="Rumble" aria-label="7 Ants Games on Rumble"><svg aria-hidden="true" focusable="false"><use href="/assets/icons/social.svg#rumble"/></svg></a>
   </nav>
   <span>No cookies, no trackers. Fonts: Silkscreen and Space Grotesk (SIL Open Font License).</span>
   <a href="#main">Back to the top ↑</a>

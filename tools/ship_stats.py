@@ -121,7 +121,7 @@ def main() -> int:
         ship = cfg[section]
         out = [f'          <article class="ship" style="--ship:{color}">',
                '            <div class="ship-head">',
-               f'              <img src="/assets/fuck-off/ships/{name.lower()}.png" alt="" width="320" height="320" loading="lazy">',
+               f'              <img src="/assets/fuck-off/ships/{name.lower()}.webp" alt="" width="240" height="240" loading="lazy">',
                f'              <div><h4>{escape(name)}</h4><p class="ship-line">{escape(line)}</p></div>',
                '            </div>']
         for title, stats in groups:
