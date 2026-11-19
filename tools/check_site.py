@@ -149,6 +149,8 @@ def resolve(base: str, ref: str) -> str | None:
 def main() -> int:
     pages: dict[str, Page] = {}
     for f in sorted(DOCS.rglob("*.html")):
+        if re.fullmatch(r"google[0-9a-f]+\.html", f.name):
+            continue  # Search Console's verification file, not a page
         p = Page()
         p.feed(f.read_text(encoding="utf-8"))
         pages[url_of(f)] = p
