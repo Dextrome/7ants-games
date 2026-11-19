@@ -1,0 +1,540 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#05060a">
+<title>FUCK OFF: browser multiplayer space shooter | 7 Ants Games</title>
+<meta name="description" content="Momentum space combat in your browser. Eight ships, two teams, bot pilots who remember you, and a tutorial that fights back. No download: open it and fly.">
+<link rel="canonical" href="https://7antsgames.com/fuck-off/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="7 Ants Games">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="FUCK OFF: Mo' Mentum Mo' Problems">
+<meta property="og:description" content="Top-down multiplayer space combat with no brakes. Eight ships, two teams, persistent bot pilots and a tutorial that roasts you. Plays in your browser.">
+<meta property="og:url" content="https://7antsgames.com/fuck-off/">
+<meta property="og:image" content="https://7antsgames.com/assets/og/fuck-off.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="The FUCK OFF wordmark over a pub battle on The Hollow">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="FUCK OFF: Mo' Mentum Mo' Problems">
+<meta name="twitter:description" content="Top-down multiplayer space combat with no brakes. Eight ships, two teams, persistent bot pilots and a tutorial that roasts you. Plays in your browser.">
+<meta name="twitter:image" content="https://7antsgames.com/assets/og/fuck-off.jpg">
+<meta name="twitter:image:alt" content="The FUCK OFF wordmark over a pub battle on The Hollow">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="/assets/fuck-off/hero.jpg" as="image" fetchpriority="high">
+<link rel="preload" href="/fonts/SpaceGrotesk-400_700.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/Silkscreen-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/style.css?v=2">
+<script src="/app.js?v=2" defer></script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "VideoGame",
+      "@id": "https://7antsgames.com/fuck-off/#game",
+      "name": "FUCK OFF: Mo' Mentum Mo' Problems",
+      "alternateName": "FUCK OFF",
+      "url": "https://7antsgames.com/fuck-off/",
+      "description": "A top-down multiplayer space shooter with momentum physics that plays in a desktop web browser. Eight ships on two teams, pubs fought over orbs, persistent bot pilots, duels against bots and a tutorial with a boss.",
+      "image": "https://7antsgames.com/assets/og/fuck-off.jpg",
+      "genre": ["Space shooter", "Multiplayer", "Action"],
+      "gamePlatform": "Web browser",
+      "playMode": ["MultiPlayer", "SinglePlayer"],
+      "inLanguage": "en",
+      "author": { "@id": "https://7antsgames.com/#organization" },
+      "publisher": { "@id": "https://7antsgames.com/#organization" },
+      "sameAs": ["https://play.7antsgames.com/"],
+      "potentialAction": { "@type": "PlayAction", "target": "https://play.7antsgames.com/?connect" }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://7antsgames.com/fuck-off/#webpage",
+      "url": "https://7antsgames.com/fuck-off/",
+      "name": "FUCK OFF: browser multiplayer space shooter | 7 Ants Games",
+      "inLanguage": "en",
+      "isPartOf": { "@id": "https://7antsgames.com/#website" },
+      "about": { "@id": "https://7antsgames.com/fuck-off/#game" },
+      "breadcrumb": { "@id": "https://7antsgames.com/fuck-off/#breadcrumb" },
+      "primaryImageOfPage": { "@type": "ImageObject", "url": "https://7antsgames.com/assets/og/fuck-off.jpg" }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://7antsgames.com/fuck-off/#breadcrumb",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "7 Ants Games", "item": "https://7antsgames.com/" },
+        { "@type": "ListItem", "position": 2, "name": "FUCK OFF", "item": "https://7antsgames.com/fuck-off/" }
+      ]
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://7antsgames.com/#organization",
+      "name": "7 Ants Games",
+      "url": "https://7antsgames.com/"
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://7antsgames.com/#website",
+      "url": "https://7antsgames.com/",
+      "name": "7 Ants Games"
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to the content</a>
+
+<header class="nav" id="nav">
+  <a class="brand" href="/">
+    <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true"><path d="M7 6h18l-9 21" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linejoin="round"/><circle cx="23.5" cy="21" r="2.6"/><circle cx="26.8" cy="25.6" r="2"/><circle cx="20.6" cy="26.4" r="1.6"/></svg>
+    <span>7 Ants Games</span>
+  </a>
+  <nav aria-label="Main">
+    <a href="/fuck-off/" aria-current="page">F<span class="nav-u">U</span>CK OFF</a>
+    <a href="/slot-theory/">Slot Theory</a>
+    <a href="/#studio">Studio</a>
+  </nav>
+  <a class="btn btn-gold btn-small" href="https://play.7antsgames.com/?connect">Play now</a>
+</header>
+
+<main id="main">
+
+<!-- ================= Hero ================= -->
+<section class="hero" id="top" aria-labelledby="fo-title">
+  <video class="hero-video" autoplay muted loop playsinline preload="metadata" poster="/assets/fuck-off/hero.jpg" aria-hidden="true">
+    <source src="/assets/fuck-off/hero.mp4" type="video/mp4" media="(prefers-reduced-motion: no-preference) and (orientation: landscape)">
+    <source src="/assets/fuck-off/hero-portrait.mp4" type="video/mp4" media="(prefers-reduced-motion: no-preference) and (orientation: portrait)">
+  </video>
+  <div class="hero-shade" aria-hidden="true"></div>
+  <div class="scanlines" aria-hidden="true"></div>
+
+  <div class="hero-inner">
+    <nav class="crumbs pixel" aria-label="Breadcrumb"><ol><li><a href="/">7 Ants Games</a></li><li aria-current="page">FUCK OFF</li></ol></nav>
+    <p class="eyebrow pixel"><span class="live-dot" aria-hidden="true"></span>Multiplayer · plays in your browser</p>
+    <h1 class="wordmark" id="fo-title"><span>F</span><span class="wm-u">U</span><span>CK OFF</span></h1>
+    <p class="subtitle pixel">Mo' Mentum Mo' Problems</p>
+    <p class="lede">A top-down multiplayer space shooter with real momentum. Thrust, drift, bounce off the walls, and fire with your own speed behind every bullet. It runs in a desktop browser. Nothing to download.</p>
+    <div class="cta-row">
+      <a class="btn btn-gold btn-big" href="https://play.7antsgames.com/?connect">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4.5v15l12-7.5z"/></svg>Play online
+      </a>
+      <a class="btn btn-pink" href="https://play.7antsgames.com/?tutorial">Get roasted (tutorial)</a>
+      <a class="btn btn-ghost" href="https://play.7antsgames.com/?mode=duel">Duel a bot</a>
+    </div>
+    <p class="keys"><span>Desktop browser and a keyboard.</span> <kbd>Arrows</kbd> fly · <kbd>Shift</kbd> boosts · <kbd>Ctrl</kbd> fires · <kbd>Space</kbd> launches bombs · <kbd>F1</kbd> shows every key</p>
+  </div>
+
+  <a class="scroll-cue pixel" href="#what">scroll<span aria-hidden="true">v</span></a>
+</section>
+
+<!-- ================= What it is ================= -->
+<section class="band intro" id="what" aria-labelledby="what-title">
+  <div class="wrap split">
+    <div class="prose reveal">
+      <p class="kicker pixel">The short version</p>
+      <h2 id="what-title">A space shooter where nothing stops.</h2>
+      <p>FUCK OFF is 2D space combat seen from above. You turn, you thrust, and your ship keeps whatever speed you gave it until you thrust the other way. Guns, bombs, mines, rockets and a few dirty tricks all draw on one energy bar, and that bar is also your health.</p>
+      <p>The flight model is rebuilt from measurements of SubSpace Continuum, the online space shooter from the late 1990s, and it runs at 100 ticks a second. If you flew there, your hands will know it. If you didn't, the tutorial will teach you, loudly.</p>
+      <p class="fine">FUCK OFF is an independent game by 7 Ants Games. It is not affiliated with SubSpace or Continuum.</p>
+      <a class="more-link" href="/fuck-off/momentum-physics/">How the momentum physics work</a>
+    </div>
+    <div class="prose reveal">
+      <h3>Ways to play</h3>
+      <ul>
+        <li><strong>The pub.</strong> Two teams, humans and bot pilots, fight over the orbs in an arena. Hold every orb for three minutes to win the map.</li>
+        <li><strong>Free for all.</strong> The Drift: open space, rocks, no sides and no orbs.</li>
+        <li><strong>Team matches.</strong> Timed, fixed sides, started from a lobby.</li>
+        <li><strong>Duel a bot.</strong> One on one, offline, right in the page.</li>
+        <li><strong>The tutorial.</strong> Eleven lessons and a boss. Offline too.</li>
+      </ul>
+      <h3>Start in a minute</h3>
+      <ol class="steps">
+        <li>Open <a href="https://play.7antsgames.com/">play.7antsgames.com</a> in Chrome, Edge or Firefox on a desktop or laptop. You need a keyboard.</li>
+        <li>New to this kind of flying? Take the <a href="https://play.7antsgames.com/?tutorial">tutorial</a> first.</li>
+        <li>Press Play online to join the hosted zone, or <a href="https://play.7antsgames.com/?mode=duel">duel a bot</a> until you stop hitting walls.</li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ================= Fleet ================= -->
+<section class="band fleet" id="fleet" aria-labelledby="fleet-title">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="kicker pixel">The fleet</p>
+      <h2 id="fleet-title">Eight ships. Pick your problem.</h2>
+      <p>Ships 1 to 4 fly for Team 1, ships 5 to 8 for Team 2. Change ship, and side, whenever the pub lets you.</p>
+      <p class="fleet-key">Bars compare the eight ships. Fuller and greener is better, so on costs and reload, less fills the bar.</p>
+    </div>
+
+    <div class="teams">
+      <!-- fleet:start (written by tools/ship_stats.py) -->
+      <div class="team reveal">
+        <h3 class="team-name pixel"><span>Team 1</span><span class="swipe-hint" aria-hidden="true">Swipe &gt;</span></h3>
+        <div class="ships">
+          <article class="ship" style="--ship:#c6ccd8">
+            <div class="ship-head">
+              <img src="/assets/fuck-off/ships/kestrel.png" alt="" width="320" height="320" loading="lazy">
+              <div><h4>Kestrel</h4><p class="ship-line">Light, quick and cheap to shoot.</p></div>
+            </div>
+            <h5 class="pixel">Flight</h5>
+            <dl class="spec">
+              <div class="stat" style="--v:0.27"><dt>Energy</dt><dd><span class="bar" role="img" aria-label="27 out of 100"><i></i></span></dd></div>
+              <div class="stat" style="--v:0.60"><dt>Recharge</dt><dd><span class="bar" role="img" aria-label="60 out of 100"><i></i></span></dd></div>
+              <div class="stat" style="--v:0.48"><dt>Top speed</dt><dd><span class="bar" role="img" aria-label="48 out of 100"><i></i></span></dd></div>
+              <div class="stat" style="--v:1.00"><dt>Boost speed</dt><dd><span class="bar" role="img" aria-label="100 out of 100"><i></i></span></dd></div>
+              <div class="stat" style="--v:0.64"><dt>Thrust</dt><dd><span class="bar" role="img" aria-label="64 out of 100"><i></i></span></dd></div>
+              <div class="stat" style="--v:0.80"><dt>Turn rate</dt><dd><span class="bar" role="img" aria-label="80 out of 100"><i></i></span></dd></div>
+              <div class="stat" style="--v:0.21"><dt>Boost cost</dt><dd><span class="bar" role="img" aria-label="21 out of 100"><i></i></span></dd></div>
+            </dl>
+            <h5 class="pixel">Guns</h5>
+            <dl class="spec">
+              <div class="stat" style="--v:0.74"><dt>Damage</dt><dd><span class="bar" role="img" aria-label="74 out of 100"><i></i></span></dd></div>
+              <div class="stat" style="--v:0.44"><dt>Fire rate</dt><dd><span class="bar" role="img" aria-label="44 out of 100"><i></i></span></dd></div>
+              <div class="stat" style="--v:1.00"><dt>Bullet speed</dt><dd><span class="bar" role="img" aria-label="100 out of 100"><i></i></span></dd></div>
+              <div class="stat" style="--v:1.00"><dt>Shot cost</dt><dd><span class="bar" role="img" aria-label="100 out of 100"><i></i></span></dd></div>
+            </dl>
+            <h5 class="pixel">Bombs<span class="h-none"> None</span></h5>
+            <dl class="spec">
+              <div class="stat stat-none"><dt>Damage</dt><dd><span class="bar" role="img" aria-label="None"></span></dd></div>
+              <div class="stat stat-none"><dt>Blast radius</dt><dd><span class="bar" role="img" aria-label="None"></span></dd></div>
+              <div class="stat stat-none"><dt>Bomb speed</dt><dd><span class="bar" role="img" aria-label="None"></span></dd></div>
+              <div class="stat stat-none"><dt>Bomb cost</dt><dd><span class="bar" role="img" aria-label="None"></span></dd></div>
+              <div class="stat stat-none"><dt>Reload</dt><dd><span class="bar" role="img" aria-label="None"></span></dd></div>
+            </dl>
+            <ul class="items"><li>4 rockets</li><li>1 portal</li></ul>
+          </article>
+          <article class="ship" style="--ship:#e6a94a">
+            <div class="ship-head">
+              <img src="/assets/fuck-off/ships/shrike.png" alt="" width="320" height="320" loading="lazy">
+              <div><h4>Shrike</h4><p class="ship-line">Big guns, no bombs.</p></div>
+            </div>
+            <h5 class="pixel">Flight</h5>
+            <dl class="spec">
+              <div class="stat" style="--v:0.91"><dt>Energy</dt><dd><span class="bar" role="img" aria-label="91 out of 100"><i></i></span></dd></div>
+              <div class="stat" style="--v:0.40"><dt>Recharge</dt><dd><span class="bar" role="img" aria-label="40 out of 100"><i></i></span></dd></div>
+              <div class="stat" style="--v:0.71"><dt>Top speed</dt><dd><span class="bar" role="img" aria-label="71 out of 100"><i></i></span></dd></div>
+              <div class="stat" style="--v:1.00"><dt>Boost speed</dt><dd><span class="bar" role="img" aria-label="100 out of 100"><i></i></span></dd></div>
+              <div class="stat" style="--v:0.27"><dt>Thrust</dt><dd><span class="bar" role="img" aria-label="27 out of 100"><i></i></span></dd></div>
+              <div class="stat" style="--v:0.60"><dt>Turn rate</dt><dd><span class="bar" role="img" aria-label="60 out of 100"><i></i></span></dd></div>
+              <div class="stat" style="--v:1.00"><dt>Boost cost</dt><dd><span class="bar" role="img" aria-label="100 out of 100"><i></i></span></dd></div>
+            </dl>
+            <h5 class="pixel">Guns</h5>
+            <dl class="spec">
+              <div class="stat" style="--v:1.00"><dt>Damage</dt><dd><span class="bar" role="img" aria-label="100 out of 100"><i></i></span></dd></div>
+              <div class="stat" style="--v:0.35"><dt>Fire rate</dt><dd><span class="bar" role="img" aria-label="35 out of 100"><i></i></span></dd></div>
+              <div class="stat" style="--v:1.00"><dt>Bullet speed</dt><dd><span class="bar" role="img" aria-label="100 out of 100"><i></i></span></dd></div>
+              <div class="stat" style="--v:0.20"><dt>Shot cost</dt><dd><span class="bar" role="img" aria-label="20 out of 100"><i></i></span></dd></div>
+            </dl>
+            <h5 class="pixel">Bombs<span class="h-none"> None</span></h5>
+            <dl class="spec">
+              <div class="stat stat-none"><dt>Damage</dt><dd><span class="bar" role="img" aria-label="None"></span></dd></div>
+              <div class="stat stat-none"><dt>Blast radius</dt><dd><span class="bar" role="img" aria-label="None"></span></dd></div>
+              <div class="stat stat-none"><dt>Bomb speed</dt><dd><span class="bar" role="img" aria-label="None"></span></dd></div>
+              <div class="stat stat-none"><dt>Bomb cost</dt><dd><span class="bar" role="img" aria-label="None"></span></dd></div>
+              <div class="stat stat-none"><dt>Reload</dt><dd><span class="bar" role="img" aria-label="None"></span></dd></div>
+            </dl>
+            <ul class="items"><li>3 rockets</li><li>1 repel</li><li>1 portal</li></ul>
+          </article>
+          <article class="ship" style="--ship:#62c384">
+            <div class="ship-head">
+              <img src="/assets/fuck-off/ships/mantis.png" alt="" width="320" height="320" loading="lazy">
+              <div><h4>Mantis</h4><p class="ship-line">The fastest bombs in the fleet.</p></div>
+            </div>
+            <h5 class="pixel">Flight</h5>
+            <dl class="spec">
+              <div class="stat" style="--v:0.45"><dt>Energy</dt><dd><span class="bar" role="img" aria-label="45 out of 100"><i></i></span></dd></div>
+              <div class="stat" style="--v:0.32"><dt>Recharge</dt><dd><span class="bar" role="img" aria-label="32 out of 100"><i></i></span></dd></div>
+              <div class="stat" style="--v:0.24"><dt>Top speed</dt><dd><span class="bar" role="img" aria-label="24 out of 100"><i></i></span></dd></div>
+              <div class="stat" style="--v:1.00"><dt>Boost speed</dt><dd><span class="bar" role="img" aria-label="100 out of 100"><i></i></span></dd></div>
+              <div class="stat" style="--v:0.27"><dt>Thrust</dt><dd><span class="bar" role="img" aria-label="27 out of 100"><i></i></span></dd></div>
+              <div class="stat" style="--v:0.30"><dt>Turn rate</dt><dd><span class="bar" role="img" aria-label="30 out of 100"><i></i></span></dd></div>
+              <div class="stat" style="--v:0.33"><dt>Boost cost</dt><dd><span class="bar" role="img" aria-label="33 out of 100"><i></i></span></dd></div>
+            </dl>
+            <h5 class="pixel">Guns</h5>
+            <dl class="spec">
+              <div class="stat" style="--v:0.74"><dt>Damage</dt><dd><span class="bar" role="img" aria-label="74 out of 100"><i></i></span></dd></div>
+              <div class="stat" style="--v:0.17"><dt>Fire rate</dt><dd><span class="bar" role="img" aria-label="17 out of 100"><i></i></span></dd></div>
+              <div class="stat" style="--v:0.25"><dt>Bullet speed</dt><dd><span class="bar" role="img" aria-label="25 out of 100"><i></i></span></dd></div>
+              <div class="stat" style="--v:0.60"><dt>Shot cost</dt><dd><span class="bar" role="img" aria-label="60 out of 100"><i></i></span></dd></div>
+            </dl>
+            <h5 class="pixel">Bombs</h5>
+            <dl class="spec">
+              <div class="stat" style="--v:1.00"><dt>Damage</dt><dd><span class="bar" role="img" aria-label="100 out of 100"><i></i></span></dd></div>
+              <div class="stat" style="--v:1.00"><dt>Blast radius</dt><dd><span class="bar" role="img" aria-label="100 out of 100"><i></i></span></dd></div>
+              <div class="stat" style="--v:1.00"><dt>Bomb speed</dt><dd><span class="bar" role="img" aria-label="100 out of 100"><i></i></span></dd></div>
+              <div class="stat" style="--v:0.31"><dt>Bomb cost</dt><dd><span class="bar" role="img" aria-label="31 out of 100"><i></i></span></dd></div>
+              <div class="stat" style="--v:1.00"><dt>Reload</dt><dd><span class="bar" role="img" aria-label="100 out of 100"><i></i></span></dd></div>
+            </dl>
+            <ul class="items"><li>4 rockets</li><li>1 burst</li><li>1 portal</li><li>4 mines</li></ul>
+          </article>
+          <article class="ship" style="--ship:#bcc86a">
+            <div class="ship-head">
+              <img src="/assets/fuck-off/ships/bastion.png" alt="" width="320" height="320" loading="lazy">
+              <div><h4>Bastion</h4><p class="ship-line">EMP bombs and the deepest energy.</p></div>
+            </div>
+            <h5 class="pixel">Flight</h5>
+            <dl class="spec">
+              <div class="stat" style="--v:1.00"><dt>Energy</dt><dd><span class="bar" role="img" aria-label="100 out of 100"><i></i></span></dd></div>
+              <div class="stat" style="--v:0.82"><dt>Recharge</dt><dd><span class="bar" role="img" aria-label="82 out of 100"><i></i></span></dd></div>
+              <div class="stat" style="--v:1.00"><dt>Top speed</dt><dd><span class="bar" role="img" aria-label="100 out of 100"><i></i></span></dd></div>
+              <div class="stat" style="--v:1.00"><dt>Boost speed</dt><dd><span class="bar" role="img" aria-label="100 out of 100"><i></i></span></dd></div>
+              <div class="stat" style="--v:0.27"><dt>Thrust</dt><dd><span class="bar" role="img" aria-label="27 out of 100"><i></i></span></dd></div>
+              <div class="stat" style="--v:0.30"><dt>Turn rate</dt><dd><span class="bar" role="img" aria-label="30 out of 100"><i></i></span></dd></div>
+              <div class="stat" style="--v:0.17"><dt>Boost cost</dt><dd><span class="bar" role="img" aria-label="17 out of 100"><i></i></span></dd></div>
+            </dl>
+            <h5 class="pixel">Guns</h5>
+            <dl class="spec">
+              <div class="stat" style="--v:0.20"><dt>Damage</dt><dd><span class="bar" role="img" aria-label="20 out of 100"><i></i></span></dd></div>
+              <div class="stat" style="--v:1.00"><dt>Fire rate</dt><dd><span class="bar" role="img" aria-label="100 out of 100"><i></i></span></dd></div>
+              <div class="stat" style="--v:0.75"><dt>Bullet speed</dt><dd><span class="bar" role="img" aria-label="75 out of 100"><i></i></span></dd></div>
+              <div class="stat" style="--v:0.20"><dt>Shot cost</dt><dd><span class="bar" role="img" aria-label="20 out of 100"><i></i></span></dd></div>
+            </dl>
+            <h5 class="pixel">Bombs</h5>
+            <dl class="spec">
+              <div class="stat" style="--v:0.10"><dt>Damage</dt><dd><span class="bar" role="img" aria-label="10 out of 100"><i></i></span></dd></div>
+              <div class="stat" style="--v:0.50"><dt>Blast radius</dt><dd><span class="bar" role="img" aria-label="50 out of 100"><i></i></span></dd></div>
+              <div class="stat" style="--v:0.29"><dt>Bomb speed</dt><dd><span class="bar" role="img" aria-label="29 out of 100"><i></i></span></dd></div>
+              <div class="stat" style="--v:0.38"><dt>Bomb cost</dt><dd><span class="bar" role="img" aria-label="38 out of 100"><i></i></span></dd></div>
+              <div class="stat" style="--v:0.29"><dt>Reload</dt><dd><span class="bar" role="img" aria-label="29 out of 100"><i></i></span></dd></div>
+            </dl>
+            <ul class="items"><li>EMP bombs</li><li>2 rockets</li><li>1 portal</li><li>1 decoy</li><li>2 mines</li></ul>
+          </article>
+        </div>
+      </div>
+      <div class="team reveal">
+        <h3 class="team-name pixel"><span>Team 2</span><span class="swipe-hint" aria-hidden="true">Swipe &gt;</span></h3>
+        <div class="ships">
+          <article class="ship" style="--ship:#f0626a">
+            <div class="ship-head">
+              <img src="/assets/fuck-off/ships/swift.png" alt="" width="320" height="320" loading="lazy">
+              <div><h4>Swift</h4><p class="ship-line">The quickest turn in the fleet.</p></div>
+            </div>
+            <h5 class="pixel">Flight</h5>
+            <dl class="spec">
+              <div class="stat" style="--v:0.36"><dt>Energy</dt><dd><span class="bar" role="img" aria-label="36 out of 100"><i></i></span></dd></div>
+              <div class="stat" style="--v:1.00"><dt>Recharge</dt><dd><span class="bar" role="img" aria-label="100 out of 100"><i></i></span></dd></div>
+              <div class="stat" style="--v:1.00"><dt>Top speed</dt><dd><span class="bar" role="img" aria-label="100 out of 100"><i></i></span></dd></div>
+              <div class="stat" style="--v:1.00"><dt>Boost speed</dt><dd><span class="bar" role="img" aria-label="100 out of 100"><i></i></span></dd></div>
+              <div class="stat" style="--v:1.00"><dt>Thrust</dt><dd><span class="bar" role="img" aria-label="100 out of 100"><i></i></span></dd></div>
+              <div class="stat" style="--v:1.00"><dt>Turn rate</dt><dd><span class="bar" role="img" aria-label="100 out of 100"><i></i></span></dd></div>
+              <div class="stat" style="--v:0.88"><dt>Boost cost</dt><dd><span class="bar" role="img" aria-label="88 out of 100"><i></i></span></dd></div>
+            </dl>
+            <h5 class="pixel">Guns</h5>
+            <dl class="spec">
+              <div class="stat" style="--v:0.74"><dt>Damage</dt><dd><span class="bar" role="img" aria-label="74 out of 100"><i></i></span></dd></div>
+              <div class="stat" style="--v:0.38"><dt>Fire rate</dt><dd><span class="bar" role="img" aria-label="38 out of 100"><i></i></span></dd></div>
+              <div class="stat" style="--v:0.50"><dt>Bullet speed</dt><dd><span class="bar" role="img" aria-label="50 out of 100"><i></i></span></dd></div>
+              <div class="stat" style="--v:0.60"><dt>Shot cost</dt><dd><span class="bar" role="img" aria-label="60 out of 100"><i></i></span></dd></div>
+            </dl>
+            <h5 class="pixel">Bombs<span class="h-none"> None</span></h5>
+            <dl class="spec">
+              <div class="stat stat-none"><dt>Damage</dt><dd><span class="bar" role="img" aria-label="None"></span></dd></div>
+              <div class="stat stat-none"><dt>Blast radius</dt><dd><span class="bar" role="img" aria-label="None"></span></dd></div>
+              <div class="stat stat-none"><dt>Bomb speed</dt><dd><span class="bar" role="img" aria-label="None"></span></dd></div>
+              <div class="stat stat-none"><dt>Bomb cost</dt><dd><span class="bar" role="img" aria-label="None"></span></dd></div>
+              <div class="stat stat-none"><dt>Reload</dt><dd><span class="bar" role="img" aria-label="None"></span></dd></div>
+            </dl>
+            <ul class="items"><li>4 rockets</li><li>1 portal</li></ul>
+          </article>
+          <article class="ship" style="--ship:#7fa9f2">
+            <div class="ship-head">
+              <img src="/assets/fuck-off/ships/wraith.png" alt="" width="320" height="320" loading="lazy">
+              <div><h4>Wraith</h4><p class="ship-line">The cheapest shots of the big guns.</p></div>
+            </div>
+            <h5 class="pixel">Flight</h5>
+            <dl class="spec">
+              <div class="stat" style="--v:0.91"><dt>Energy</dt><dd><span class="bar" role="img" aria-label="91 out of 100"><i></i></span></dd></div>
+              <div class="stat" style="--v:0.28"><dt>Recharge</dt><dd><span class="bar" role="img" aria-label="28 out of 100"><i></i></span></dd></div>
+              <div class="stat" style="--v:0.71"><dt>Top speed</dt><dd><span class="bar" role="img" aria-label="71 out of 100"><i></i></span></dd></div>
+              <div class="stat" style="--v:1.00"><dt>Boost speed</dt><dd><span class="bar" role="img" aria-label="100 out of 100"><i></i></span></dd></div>
+              <div class="stat" style="--v:0.27"><dt>Thrust</dt><dd><span class="bar" role="img" aria-label="27 out of 100"><i></i></span></dd></div>
+              <div class="stat" style="--v:0.40"><dt>Turn rate</dt><dd><span class="bar" role="img" aria-label="40 out of 100"><i></i></span></dd></div>
+              <div class="stat" style="--v:0.75"><dt>Boost cost</dt><dd><span class="bar" role="img" aria-label="75 out of 100"><i></i></span></dd></div>
+            </dl>
+            <h5 class="pixel">Guns</h5>
+            <dl class="spec">
+              <div class="stat" style="--v:1.00"><dt>Damage</dt><dd><span class="bar" role="img" aria-label="100 out of 100"><i></i></span></dd></div>
+              <div class="stat" style="--v:0.35"><dt>Fire rate</dt><dd><span class="bar" role="img" aria-label="35 out of 100"><i></i></span></dd></div>
+              <div class="stat" style="--v:1.00"><dt>Bullet speed</dt><dd><span class="bar" role="img" aria-label="100 out of 100"><i></i></span></dd></div>
+              <div class="stat" style="--v:0.50"><dt>Shot cost</dt><dd><span class="bar" role="img" aria-label="50 out of 100"><i></i></span></dd></div>
+            </dl>
+            <h5 class="pixel">Bombs<span class="h-none"> None</span></h5>
+            <dl class="spec">
+              <div class="stat stat-none"><dt>Damage</dt><dd><span class="bar" role="img" aria-label="None"></span></dd></div>
+              <div class="stat stat-none"><dt>Blast radius</dt><dd><span class="bar" role="img" aria-label="None"></span></dd></div>
+              <div class="stat stat-none"><dt>Bomb speed</dt><dd><span class="bar" role="img" aria-label="None"></span></dd></div>
+              <div class="stat stat-none"><dt>Bomb cost</dt><dd><span class="bar" role="img" aria-label="None"></span></dd></div>
+              <div class="stat stat-none"><dt>Reload</dt><dd><span class="bar" role="img" aria-label="None"></span></dd></div>
+            </dl>
+            <ul class="items"><li>3 rockets</li><li>1 repel</li><li>1 portal</li></ul>
+          </article>
+          <article class="ship" style="--ship:#b583f2">
+            <div class="ship-head">
+              <img src="/assets/fuck-off/ships/anvil.png" alt="" width="320" height="320" loading="lazy">
+              <div><h4>Anvil</h4><p class="ship-line">EMP bombs on a budget.</p></div>
+            </div>
+            <h5 class="pixel">Flight</h5>
+            <dl class="spec">
+              <div class="stat" style="--v:0.73"><dt>Energy</dt><dd><span class="bar" role="img" aria-label="73 out of 100"><i></i></span></dd></div>
+              <div class="stat" style="--v:0.60"><dt>Recharge</dt><dd><span class="bar" role="img" aria-label="60 out of 100"><i></i></span></dd></div>
+              <div class="stat" style="--v:0.71"><dt>Top speed</dt><dd><span class="bar" role="img" aria-label="71 out of 100"><i></i></span></dd></div>
+              <div class="stat" style="--v:1.00"><dt>Boost speed</dt><dd><span class="bar" role="img" aria-label="100 out of 100"><i></i></span></dd></div>
+              <div class="stat" style="--v:0.27"><dt>Thrust</dt><dd><span class="bar" role="img" aria-label="27 out of 100"><i></i></span></dd></div>
+              <div class="stat" style="--v:0.60"><dt>Turn rate</dt><dd><span class="bar" role="img" aria-label="60 out of 100"><i></i></span></dd></div>
+              <div class="stat" style="--v:0.17"><dt>Boost cost</dt><dd><span class="bar" role="img" aria-label="17 out of 100"><i></i></span></dd></div>
+            </dl>
+            <h5 class="pixel">Guns</h5>
+            <dl class="spec">
+              <div class="stat" style="--v:1.00"><dt>Damage</dt><dd><span class="bar" role="img" aria-label="100 out of 100"><i></i></span></dd></div>
+              <div class="stat" style="--v:0.44"><dt>Fire rate</dt><dd><span class="bar" role="img" aria-label="44 out of 100"><i></i></span></dd></div>
+              <div class="stat" style="--v:1.00"><dt>Bullet speed</dt><dd><span class="bar" role="img" aria-label="100 out of 100"><i></i></span></dd></div>
+              <div class="stat" style="--v:0.20"><dt>Shot cost</dt><dd><span class="bar" role="img" aria-label="20 out of 100"><i></i></span></dd></div>
+            </dl>
+            <h5 class="pixel">Bombs</h5>
+            <dl class="spec">
+              <div class="stat" style="--v:0.10"><dt>Damage</dt><dd><span class="bar" role="img" aria-label="10 out of 100"><i></i></span></dd></div>
+              <div class="stat" style="--v:0.50"><dt>Blast radius</dt><dd><span class="bar" role="img" aria-label="50 out of 100"><i></i></span></dd></div>
+              <div class="stat" style="--v:0.37"><dt>Bomb speed</dt><dd><span class="bar" role="img" aria-label="37 out of 100"><i></i></span></dd></div>
+              <div class="stat" style="--v:1.00"><dt>Bomb cost</dt><dd><span class="bar" role="img" aria-label="100 out of 100"><i></i></span></dd></div>
+              <div class="stat" style="--v:0.29"><dt>Reload</dt><dd><span class="bar" role="img" aria-label="29 out of 100"><i></i></span></dd></div>
+            </dl>
+            <ul class="items"><li>EMP bombs</li><li>3 rockets</li><li>1 portal</li><li>1 decoy</li><li>2 mines</li></ul>
+          </article>
+          <article class="ship" style="--ship:#9a9af0">
+            <div class="ship-head">
+              <img src="/assets/fuck-off/ships/hammerhead.png" alt="" width="320" height="320" loading="lazy">
+              <div><h4>Hammerhead</h4><p class="ship-line">Level 3 bombs, slow to turn.</p></div>
+            </div>
+            <h5 class="pixel">Flight</h5>
+            <dl class="spec">
+              <div class="stat" style="--v:0.82"><dt>Energy</dt><dd><span class="bar" role="img" aria-label="82 out of 100"><i></i></span></dd></div>
+              <div class="stat" style="--v:0.32"><dt>Recharge</dt><dd><span class="bar" role="img" aria-label="32 out of 100"><i></i></span></dd></div>
+              <div class="stat" style="--v:0.24"><dt>Top speed</dt><dd><span class="bar" role="img" aria-label="24 out of 100"><i></i></span></dd></div>
+              <div class="stat" style="--v:0.67"><dt>Boost speed</dt><dd><span class="bar" role="img" aria-label="67 out of 100"><i></i></span></dd></div>
+              <div class="stat" style="--v:0.36"><dt>Thrust</dt><dd><span class="bar" role="img" aria-label="36 out of 100"><i></i></span></dd></div>
+              <div class="stat" style="--v:0.20"><dt>Turn rate</dt><dd><span class="bar" role="img" aria-label="20 out of 100"><i></i></span></dd></div>
+              <div class="stat" style="--v:0.25"><dt>Boost cost</dt><dd><span class="bar" role="img" aria-label="25 out of 100"><i></i></span></dd></div>
+            </dl>
+            <h5 class="pixel">Guns</h5>
+            <dl class="spec">
+              <div class="stat" style="--v:0.74"><dt>Damage</dt><dd><span class="bar" role="img" aria-label="74 out of 100"><i></i></span></dd></div>
+              <div class="stat" style="--v:0.17"><dt>Fire rate</dt><dd><span class="bar" role="img" aria-label="17 out of 100"><i></i></span></dd></div>
+              <div class="stat" style="--v:0.25"><dt>Bullet speed</dt><dd><span class="bar" role="img" aria-label="25 out of 100"><i></i></span></dd></div>
+              <div class="stat" style="--v:1.00"><dt>Shot cost</dt><dd><span class="bar" role="img" aria-label="100 out of 100"><i></i></span></dd></div>
+            </dl>
+            <h5 class="pixel">Bombs</h5>
+            <dl class="spec">
+              <div class="stat" style="--v:1.00"><dt>Damage</dt><dd><span class="bar" role="img" aria-label="100 out of 100"><i></i></span></dd></div>
+              <div class="stat" style="--v:1.00"><dt>Blast radius</dt><dd><span class="bar" role="img" aria-label="100 out of 100"><i></i></span></dd></div>
+              <div class="stat" style="--v:0.37"><dt>Bomb speed</dt><dd><span class="bar" role="img" aria-label="37 out of 100"><i></i></span></dd></div>
+              <div class="stat" style="--v:0.38"><dt>Bomb cost</dt><dd><span class="bar" role="img" aria-label="38 out of 100"><i></i></span></dd></div>
+              <div class="stat" style="--v:0.29"><dt>Reload</dt><dd><span class="bar" role="img" aria-label="29 out of 100"><i></i></span></dd></div>
+            </dl>
+            <ul class="items"><li>4 rockets</li><li>1 burst</li><li>1 portal</li><li>2 mines</li></ul>
+          </article>
+        </div>
+      </div>
+      <!-- fleet:end -->
+    </div>
+  </div>
+</section>
+
+<!-- ================= Pub ================= -->
+<section class="band pub" id="pub" aria-labelledby="pub-title">
+  <div class="wrap split split-pub">
+    <div class="split-copy reveal">
+      <p class="kicker pixel">The pub</p>
+      <h2 id="pub-title">Hold every orb.<br><em>For three whole minutes.</em></h2>
+      <p>Two sides fight over the orbs inside the arena. Fly over one to take it for your side. Hold all of them for three minutes and the pub is won, and the next match starts on the next map.</p>
+      <p>The pilots are bots, and they are characters: each has a name, a personality, a mood, memories, grudges and a skill that grows. They chat in their own voice and remember who killed them. They are always marked as bots.</p>
+    </div>
+    <div class="chatlog pixel reveal" role="group" aria-label="Chat from a pub">
+      <p class="cl-kill">@zorb_pyro destroyed by @SaltyWalrus</p>
+      <p class="cl-kill">@angry_jackal destroyed by @Rustfalcon3</p>
+      <p><span class="cl-name">@Jackal173&gt;</span> who has the orbs right now?</p>
+      <p><span class="cl-name">@space_viper&gt;</span> Thanks for the kill Toaster419 man.</p>
+      <p><span class="cl-name">@pyro60&gt;</span> wow ty jo</p>
+      <p class="cl-kill">@vex_krill destroyed by @Captainjackal9</p>
+      <p><span class="cl-name">@zorb_pyro&gt;</span> how do i attach to someone</p>
+      <p><span class="cl-name">@xXWizardXx&gt;</span> that was a tax on stupidity and i paid it</p>
+      <p><span class="cl-name">@SaltyWalrus&gt;</span> i win</p>
+      <p><span class="cl-name">@Jackal173&gt;</span> push the orbs together dude</p>
+      <p class="cl-cursor"><span class="cl-you">&gt;</span> <span class="caret" aria-hidden="true"></span></p>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <h3 class="maps-title reveal">The maps</h3>
+    <div class="maps">
+      <article class="map reveal"><img src="/assets/fuck-off/maps/hollow.jpg" alt="Walls and orbs of The Hollow" loading="lazy" width="540" height="960"><div class="map-copy"><h4>The Hollow</h4><p>The default pub map. Two ways in: the Throat, short and narrow with doors, and the Dock, wide and straight with a gun gallery on either side.</p></div></article>
+      <article class="map reveal"><img src="/assets/fuck-off/maps/compass.jpg" alt="The Reliquary sector of The Compass" loading="lazy" width="540" height="960"><div class="map-copy"><h4>The Compass</h4><p>A station of four sectors, the Guns, the Hangar, the Warren and the Reliquary, that all open on the Hub in the middle.</p></div></article>
+      <article class="map reveal"><img src="/assets/fuck-off/maps/bulwark.jpg" alt="Rooms and lanes of The Bulwark" loading="lazy" width="540" height="960"><div class="map-copy"><h4>The Bulwark</h4><p>The Trench: three narrow lanes, and only the middle one goes through. The Twins: two wide tunnels on the far side.</p></div></article>
+      <article class="map reveal"><img src="/assets/fuck-off/maps/drift.jpg" alt="Rocks in the open space of The Drift" loading="lazy" width="540" height="960"><div class="map-copy"><h4>The Drift</h4><p>Free for all. Open space, rocks, no sides and no orbs. Every pilot for themselves.</p></div></article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= Tutorial ================= -->
+<section class="band" id="tutorial" aria-labelledby="lessons-title">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="kicker pixel" style="color: var(--pink)">The tutorial</p>
+      <h2 id="lessons-title">Eleven lessons. <em>Then it gets personal.</em></h2>
+      <p>A narrator walks you through the ship one lesson at a time and has opinions about every wall you hit. Each lesson is short if you are competent. The last one is a fight with the tutorial itself: you need one kill, it needs five. Losing still counts as finishing.</p>
+    </div>
+    <ol class="lessons reveal">
+      <li>Steering</li>
+      <li>Stopping</li>
+      <li>Afterburner</li>
+      <li>Guns</li>
+      <li>Moving target</li>
+      <li>Bombs</li>
+      <li>Mines</li>
+      <li>Panic buttons</li>
+      <li>Safe zone</li>
+      <li>Live fire</li>
+      <li>Final exam</li>
+      <li class="boss">The Tutorial</li>
+    </ol>
+    <div class="cta-row reveal" style="margin-top: 30px">
+      <a class="btn btn-pink btn-big" href="https://play.7antsgames.com/?tutorial">Start the tutorial</a>
+    </div>
+    <p class="keys reveal">It swears. The "Mild language in chat" setting swaps the worst of it out.</p>
+  </div>
+</section>
+
+<!-- ================= Final CTA ================= -->
+<section class="band launch" aria-labelledby="launch-title">
+  <div class="wrap launch-inner reveal">
+    <img class="launch-ship" src="/assets/fuck-off/ships/kestrel.png" alt="" width="32" height="32" loading="lazy">
+    <h2 id="launch-title">Stop reading.<br><em>Start drifting.</em></h2>
+    <div class="cta-row cta-center">
+      <a class="btn btn-gold btn-big" href="https://play.7antsgames.com/?connect"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4.5v15l12-7.5z"/></svg>Play online</a>
+      <a class="btn btn-ghost" href="https://play.7antsgames.com/?mode=duel">Duel a bot offline</a>
+    </div>
+    <p class="keys"><span>Runs in Chrome, Edge and Firefox on the desktop.</span> No download.</p>
+    <a class="more-link" href="/">More from 7 Ants Games</a>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <span>© 2026 7 Ants Games</span>
+  <nav aria-label="Site">
+    <a href="/">Home</a>
+    <a href="/fuck-off/momentum-physics/">Momentum physics</a>
+    <a href="/slot-theory/">Slot Theory</a>
+    <a href="/slot-theory/how-to-play/">How to play Slot Theory</a>
+    <a href="https://discord.com/invite/cEnnAErRvW">Discord</a>
+  </nav>
+  <span>No cookies, no trackers. Fonts: Silkscreen and Space Grotesk (SIL Open Font License).</span>
+  <a href="#main">Back to the top ↑</a>
+</footer>
+</body>
+</html>

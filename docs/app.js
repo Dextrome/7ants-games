@@ -1,13 +1,17 @@
 "use strict";
+// One script for every page. Each feature looks for its own elements and does nothing on a page
+// without them, so a page carries only the markup it needs.
 (function () {
   document.documentElement.classList.add("js");
   const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
   // ---- Nav background once the page scrolls ----
   const nav = document.getElementById("nav");
-  const onScroll = () => nav.classList.toggle("scrolled", window.scrollY > 40);
-  window.addEventListener("scroll", onScroll, { passive: true });
-  onScroll();
+  if (nav) {
+    const onScroll = () => nav.classList.toggle("scrolled", window.scrollY > 40);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    onScroll();
+  }
 
   // ---- Reveal on scroll ----
   const reveals = document.querySelectorAll(".reveal");
@@ -21,11 +25,13 @@
   }
 
   // ---- Hero video: still frame for reduced motion ----
+  // The sources ask for (prefers-reduced-motion: no-preference), so a current browser downloads
+  // nothing then; this covers browsers that ignore media on <source>.
   const hero = document.querySelector(".hero-video");
   if (hero && reduced) { hero.removeAttribute("autoplay"); hero.pause(); }
 
   // ---- Clip reel: plays what is on screen, muted; one clip at a time has sound ----
-  const clips = Array.from(document.querySelectorAll(".clip"));
+  const clips = Array.from(document.querySelectorAll(".clip")).filter((c) => c.querySelector("video") && c.querySelector(".sound"));
   let voiced = null;
   function setSound(clip, on) {
     const video = clip.querySelector("video");
@@ -60,16 +66,19 @@
   const box = document.getElementById("lightbox");
   const boxImg = document.getElementById("lightbox-img");
   const boxCap = document.getElementById("lightbox-caption");
-  document.querySelectorAll(".shot").forEach((shot) => {
-    shot.addEventListener("click", () => {
-      boxImg.src = shot.dataset.full;
-      boxImg.alt = shot.querySelector("img").alt;
-      boxCap.textContent = shot.dataset.caption;
-      if (box.showModal) box.showModal(); else window.open(shot.dataset.full, "_blank");
+  const boxClose = document.getElementById("lightbox-close");
+  if (box && boxImg && boxCap) {
+    document.querySelectorAll(".shot").forEach((shot) => {
+      shot.addEventListener("click", () => {
+        boxImg.src = shot.dataset.full;
+        boxImg.alt = shot.querySelector("img").alt;
+        boxCap.textContent = shot.dataset.caption;
+        if (box.showModal) box.showModal(); else window.open(shot.dataset.full, "_blank");
+      });
     });
-  });
-  document.getElementById("lightbox-close").addEventListener("click", () => box.close());
-  box.addEventListener("click", (e) => { if (e.target === box) box.close(); });
+    if (boxClose) boxClose.addEventListener("click", () => box.close());
+    box.addEventListener("click", (e) => { if (e.target === box) box.close(); });
+  }
 
   // ---- Slot Theory trailer: nothing loads from YouTube until someone presses play ----
   const trailer = document.getElementById("trailer");
@@ -93,12 +102,12 @@
 
   // ---- Mo' Mentum toy: a Kestrel chases the pointer, with no brakes ----
   const canvas = document.getElementById("toy");
-  if (!canvas) return;
-  const ctx = canvas.getContext("2d");
+  const ctx = canvas && canvas.getContext ? canvas.getContext("2d") : null;
+  if (!ctx) return;
   const W = canvas.width, H = canvas.height, TILE = 16;
-  const speedOut = document.getElementById("toy-speed");
+  const speedOut = document.getElementById("toy-speed") || { textContent: "" };
   const sprite = new Image();
-  sprite.src = "assets/fuck-off/ships/kestrel.png";
+  sprite.src = "/assets/fuck-off/ships/kestrel.png";  // from the site root: the toy runs on more than one page
 
   const TURN = 0.75 * Math.PI * 2;  // the Kestrel turns 0.75 times a second
   const THRUST = 320, MAX_SPEED = 430, BOUNCE = 0.6;

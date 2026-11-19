@@ -1,4 +1,4 @@
-"""Write the fleet's stat cards into docs/index.html from the game's own settings.
+"""Write the fleet's stat cards into docs/fuck-off/index.html from the game's own settings.
 
 Reads E:/DexSpace/configs/dsb.cfg and replaces everything between the fleet:start and fleet:end
 comments. The arithmetic follows the simulation (src/simulation/Ship.cpp, World.cpp):
@@ -23,7 +23,7 @@ from pathlib import Path
 from typing import Callable, Optional
 
 ROOT = Path(__file__).resolve().parent.parent
-PAGE = ROOT / "docs" / "index.html"
+PAGE = ROOT / "docs" / "fuck-off" / "index.html"
 CONFIG = Path("E:/DexSpace/configs/dsb.cfg")
 
 # (config section, name, card color, one line)
@@ -121,7 +121,7 @@ def main() -> int:
         ship = cfg[section]
         out = [f'          <article class="ship" style="--ship:{color}">',
                '            <div class="ship-head">',
-               f'              <img src="assets/fuck-off/ships/{name.lower()}.png" alt="" width="320" height="320" loading="lazy">',
+               f'              <img src="/assets/fuck-off/ships/{name.lower()}.png" alt="" width="320" height="320" loading="lazy">',
                f'              <div><h4>{escape(name)}</h4><p class="ship-line">{escape(line)}</p></div>',
                '            </div>']
         for title, stats in groups:
@@ -148,7 +148,7 @@ def main() -> int:
     block = "<!-- fleet:start (written by tools/ship_stats.py) -->\n" + "\n".join(blocks) + "\n      <!-- fleet:end -->"
     html, found = re.subn(r"<!-- fleet:start.*?<!-- fleet:end -->", lambda _: block, html, flags=re.S)
     if found != 1:
-        raise SystemExit("docs/index.html: the fleet:start and fleet:end comments are missing")
+        raise SystemExit("docs/fuck-off/index.html: the fleet:start and fleet:end comments are missing")
     PAGE.write_bytes(html.encode("utf-8"))
     print("fleet cards written")
     return 0

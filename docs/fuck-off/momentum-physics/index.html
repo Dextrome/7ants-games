@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#05060a">
+<title>Momentum physics in FUCK OFF: thrust, drift and bouncing | 7 Ants Games</title>
+<meta name="description" content="How flight works in FUCK OFF: no drag, thrust along your nose, a boost that burns your health, bullets that carry your speed and walls that bounce you back.">
+<link rel="canonical" href="https://7antsgames.com/fuck-off/momentum-physics/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="7 Ants Games">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="Momentum physics in FUCK OFF">
+<meta property="og:description" content="Why your ship will not stop, where your bullets actually go, and how to turn both into kills.">
+<meta property="og:url" content="https://7antsgames.com/fuck-off/momentum-physics/">
+<meta property="og:image" content="https://7antsgames.com/assets/og/fuck-off.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="The FUCK OFF wordmark over a pub battle on The Hollow">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Momentum physics in FUCK OFF">
+<meta name="twitter:description" content="Why your ship will not stop, where your bullets actually go, and how to turn both into kills.">
+<meta name="twitter:image" content="https://7antsgames.com/assets/og/fuck-off.jpg">
+<meta name="twitter:image:alt" content="The FUCK OFF wordmark over a pub battle on The Hollow">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="/fonts/SpaceGrotesk-400_700.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/Silkscreen-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/style.css?v=2">
+<script src="/app.js?v=2" defer></script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": "https://7antsgames.com/fuck-off/momentum-physics/#article",
+      "headline": "Momentum physics in FUCK OFF",
+      "description": "How flight works in FUCK OFF: no drag, thrust along your nose, a boost that burns your health, bullets that carry your speed and walls that bounce you.",
+      "image": "https://7antsgames.com/assets/og/fuck-off.jpg",
+      "inLanguage": "en",
+      "datePublished": "2026-11-19",
+      "dateModified": "2026-11-19",
+      "author": { "@id": "https://7antsgames.com/#organization" },
+      "publisher": { "@id": "https://7antsgames.com/#organization" },
+      "about": { "@id": "https://7antsgames.com/fuck-off/#game" },
+      "mainEntityOfPage": { "@id": "https://7antsgames.com/fuck-off/momentum-physics/#webpage" }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://7antsgames.com/fuck-off/momentum-physics/#webpage",
+      "url": "https://7antsgames.com/fuck-off/momentum-physics/",
+      "name": "Momentum physics in FUCK OFF: thrust, drift and bouncing | 7 Ants Games",
+      "inLanguage": "en",
+      "isPartOf": { "@id": "https://7antsgames.com/#website" },
+      "breadcrumb": { "@id": "https://7antsgames.com/fuck-off/momentum-physics/#breadcrumb" }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://7antsgames.com/fuck-off/momentum-physics/#breadcrumb",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "7 Ants Games", "item": "https://7antsgames.com/" },
+        { "@type": "ListItem", "position": 2, "name": "FUCK OFF", "item": "https://7antsgames.com/fuck-off/" },
+        { "@type": "ListItem", "position": 3, "name": "Momentum physics", "item": "https://7antsgames.com/fuck-off/momentum-physics/" }
+      ]
+    },
+    {
+      "@type": "VideoGame",
+      "@id": "https://7antsgames.com/fuck-off/#game",
+      "name": "FUCK OFF: Mo' Mentum Mo' Problems",
+      "url": "https://7antsgames.com/fuck-off/"
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://7antsgames.com/#organization",
+      "name": "7 Ants Games",
+      "url": "https://7antsgames.com/"
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://7antsgames.com/#website",
+      "url": "https://7antsgames.com/",
+      "name": "7 Ants Games"
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to the content</a>
+
+<header class="nav" id="nav">
+  <a class="brand" href="/">
+    <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true"><path d="M7 6h18l-9 21" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linejoin="round"/><circle cx="23.5" cy="21" r="2.6"/><circle cx="26.8" cy="25.6" r="2"/><circle cx="20.6" cy="26.4" r="1.6"/></svg>
+    <span>7 Ants Games</span>
+  </a>
+  <nav aria-label="Main">
+    <a href="/fuck-off/">F<span class="nav-u">U</span>CK OFF</a>
+    <a href="/slot-theory/">Slot Theory</a>
+    <a href="/#studio">Studio</a>
+  </nav>
+  <a class="btn btn-gold btn-small" href="https://play.7antsgames.com/?connect">Play now</a>
+</header>
+
+<main id="main">
+<header class="guide-hero">
+  <div class="wrap">
+    <nav class="crumbs pixel" aria-label="Breadcrumb"><ol><li><a href="/">7 Ants Games</a></li><li><a href="/fuck-off/">FUCK OFF</a></li><li aria-current="page">Momentum physics</li></ol></nav>
+    <p class="kicker pixel">Guide · Mo' Mentum</p>
+    <h1>Momentum physics in FUCK OFF</h1>
+    <p class="lede">Why your ship will not stop, where your bullets actually go, and how to turn both into kills. Everything here is how the game really computes it.</p>
+  </div>
+</header>
+
+<article class="guide-body">
+  <div class="wrap"><div class="prose">
+    <h2>The rule: nothing stops on its own</h2>
+    <p>There is no drag. Every tick, 100 times a second, holding <kbd>Up</kbd> adds a little speed in the direction your nose points. Let go and you keep exactly the velocity you had, forever, or until something changes it. Every ship has a top speed, and thrust stops adding speed once you reach it.</p>
+    <p>That means there is no brake. To stop, turn until your nose points against your motion and thrust until the speed is gone. <kbd>Down</kbd> thrusts backwards, which is quicker for small corrections but does nothing a turn and a push cannot.</p>
+
+    <figure class="toy guide-toy" aria-labelledby="toy-caption">
+      <canvas id="toy" width="640" height="440" aria-label="A Kestrel chasing your pointer. It keeps drifting until it turns around and thrusts the other way."></canvas>
+      <figcaption id="toy-caption" class="pixel"><span>Move your pointer here. Watch it overshoot.</span><span id="toy-speed">0 px/s</span></figcaption>
+    </figure>
+    <p>The little Kestrel above flies by the same idea: it can only turn and push, so it overshoots, swings round and pushes back. The blue line is where it is actually going. Its numbers are rounded for the page, not the game's exact values.</p>
+
+    <h2>Turning is not moving</h2>
+    <p><kbd>Left</kbd> and <kbd>Right</kbd> turn the ship at a fixed rate. Turning changes where your next push goes. It does not change where you are going. New pilots turn toward an enemy and expect to fly there, then sail past sideways. Turn rate differs a lot between ships: the Swift turns quickest in the fleet, the Hammerhead slowest. The <a href="/fuck-off/#fleet">fleet cards</a> compare all eight.</p>
+
+    <h2>Boost burns the same bar as your health</h2>
+    <p>Hold <kbd>Shift</kbd> while you thrust and the afterburner kicks in: stronger thrust and a higher speed cap. It only works while you thrust, and it costs energy every tick it runs. Energy is one bar for everything: your shots, your boost and your health. A pilot who arrives fast and empty arrives dead. Let go of <kbd>Shift</kbd> and the ship drops back to its normal top speed at once.</p>
+
+    <h2>Your bullets carry your speed</h2>
+    <p>A bullet leaves your ship at the gun's speed plus your own velocity. Fly toward someone and your shots arrive sooner. Fly away and they crawl. Strafe sideways and every bullet drifts sideways with you, so a shot aimed straight at a target misses by exactly how fast you were sliding.</p>
+    <ul>
+      <li><strong>Lead the target</strong>: aim where they will be, because they are drifting too.</li>
+      <li><strong>Shoot along your motion</strong> for the fastest, straightest bullets.</li>
+      <li><strong>Use the slide</strong>: flying across an enemy's path while firing sprays a line they have to cross.</li>
+    </ul>
+
+    <h2>Walls bounce you</h2>
+    <p>Hit a wall and the part of your velocity going into it flips around, and the bounce keeps a bit less than half of your speed. Walls are not just obstacles: they are the cheapest way to change direction, and the reason a chase down a corridor turns into a pinball game.</p>
+
+    <h2>Rockets shove, the Mantis kicks</h2>
+    <p>A rocket fires you forward along your heading for a few seconds, then lets you go at normal speed. It changes your velocity like a huge thrust you do not pay energy for, so it is a movement tool as much as anything: an escape, or a way into a fight faster than anyone expects. Every ship starts with a few.</p>
+    <p>The Mantis has a second trick. Its bombs kick: every launch pushes the ship backwards, away from where it fired. Bomb along your drift and the recoil brakes you. The other bombers launch without recoil.</p>
+
+    <h2>Why it makes the fights what they are</h2>
+    <p>Because speed persists, a fight is about angles and approach speed rather than aim alone. You can fly one way and shoot another. You can come in hot, fire, and be gone before the return fire lands, if you started turning early enough. Every pilot in the arena, human or bot, flies on the same rules, so the bots overshoot too.</p>
+
+    <p class="note">The flight model is rebuilt from measurements of SubSpace Continuum and checked against them tick by tick: thrust, coasting, turning, bouncing, recharge and bullet speeds. FUCK OFF is an independent game and is not affiliated with SubSpace or Continuum.</p>
+
+    <h2>Practice it</h2>
+    <ol class="steps">
+      <li>The <a href="https://play.7antsgames.com/?tutorial">tutorial</a> drills steering, stopping and the afterburner in its first three lessons, and tells you exactly how bad you were.</li>
+      <li><a href="https://play.7antsgames.com/?mode=duel">Duel a bot</a> offline and practice leading shots on something that moves.</li>
+      <li>Then <a href="https://play.7antsgames.com/?connect">play online</a> and find out it all happens at once.</li>
+    </ol>
+    <p><a href="/fuck-off/">Back to FUCK OFF: the ships, the maps and the pub</a></p>
+  </div></div>
+</article>
+</main>
+
+<footer class="foot">
+  <span>© 2026 7 Ants Games</span>
+  <nav aria-label="Site">
+    <a href="/">Home</a>
+    <a href="/fuck-off/">FUCK OFF</a>
+    <a href="/slot-theory/">Slot Theory</a>
+    <a href="/slot-theory/how-to-play/">How to play Slot Theory</a>
+    <a href="https://discord.com/invite/cEnnAErRvW">Discord</a>
+  </nav>
+  <span>No cookies, no trackers. Fonts: Silkscreen and Space Grotesk (SIL Open Font License).</span>
+  <a href="#main">Back to the top ↑</a>
+</footer>
+</body>
+</html>

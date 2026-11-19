@@ -108,6 +108,12 @@ def main() -> int:
         ff("-ss", "38", "-t", "18", "-i", str(hero_src), "-an", "-vf", vf, "-c:v", "libx264",
            "-crf", "27", "-preset", "slow", "-pix_fmt", "yuv420p", "-movflags", "+faststart",
            str(fo / "hero.mp4"))
+        # Portrait screens crop the 16:9 hero to its middle anyway (object-fit: cover), so they get
+        # that middle strip at the same pixel density: about a third of the bytes. The page picks
+        # it with <source media="(orientation: portrait)">.
+        ff("-ss", "38", "-t", "18", "-i", str(hero_src), "-an", "-vf", vf + ",crop=406:720", "-c:v", "libx264",
+           "-crf", "27", "-preset", "slow", "-pix_fmt", "yuv420p", "-movflags", "+faststart",
+           str(fo / "hero-portrait.mp4"))
         ff("-ss", "42", "-i", str(hero_src), "-frames:v", "1", "-vf", vf, "-q:v", "4", str(fo / "hero.jpg"))
 
     # Vertical clips: drawn at 540x960 and doubled by the recorder, so 540x960 loses nothing.
@@ -144,6 +150,7 @@ def main() -> int:
         logo = Image.open(SLOT / "promo_images/promo/slot_theory_logo_oneline.png")
         logo.thumbnail((1100, 1100), Image.LANCZOS)
         logo.save(st / "logo.png", optimize=True)
+        logo.save(st / "logo.webp", quality=88, method=6)  # a quarter of the PNG; the page offers both
 
     total = sum(p.stat().st_size for p in OUT.rglob("*") if p.is_file())
     print(f"assets: {total / 1e6:.1f} MB")
