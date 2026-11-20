@@ -10,7 +10,8 @@ Published at [7antsgames.com](https://7antsgames.com) with GitHub Pages from `ma
 (`docs/CNAME`; DNS at Cloudflare: CNAME `@` and `www` → `dextrome.github.io`, DNS only). Preview locally by serving `docs`
 (`python -m http.server 8080 -d docs`). No build step, no dependencies, no cookies or
 analytics; fonts are self-hosted (Silkscreen and Space Grotesk, SIL Open Font License). The Slot
-Theory trailer comes from YouTube's privacy-enhanced player, loaded only when someone presses play.
+Theory trailer is self-hosted (`docs/assets/slot-theory/trailer.mp4`, re-encoded from the 69 MB master
+to about 16 MB) and loads only when someone presses play. Nothing comes from other sites.
 
 ## Pages
 

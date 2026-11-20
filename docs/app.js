@@ -80,18 +80,19 @@
     box.addEventListener("click", (e) => { if (e.target === box) box.close(); });
   }
 
-  // ---- Slot Theory trailer: nothing loads from YouTube until someone presses play ----
+  // ---- Slot Theory trailer: hosted here, the video file loads only when someone presses play ----
   const trailer = document.getElementById("trailer");
   if (trailer) {
     trailer.addEventListener("click", (e) => {
       if (e.ctrlKey || e.metaKey || e.shiftKey || e.button !== 0) return;  // a new tab, as the link asks
       e.preventDefault();
-      const player = document.createElement("iframe");
-      player.src = "https://www.youtube-nocookie.com/embed/" + trailer.dataset.video + "?autoplay=1&rel=0&playsinline=1";
+      const player = document.createElement("video");
+      player.src = trailer.getAttribute("href");
       player.title = "Slot Theory trailer";
-      player.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
-      player.allowFullscreen = true;
-      player.referrerPolicy = "strict-origin-when-cross-origin";
+      player.controls = true;
+      player.autoplay = true;
+      player.playsInline = true;
+      player.preload = "auto";
       const frame = document.createElement("div");
       frame.className = "trailer";
       frame.append(player);
