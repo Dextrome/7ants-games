@@ -85,12 +85,20 @@
   if (trailer) {
     trailer.addEventListener("click", (e) => {
       if (e.ctrlKey || e.metaKey || e.shiftKey || e.button !== 0) return;  // a new tab, as the link asks
+      if (trailer.dataset.failed) return;  // the player failed once: let the link open the file
       e.preventDefault();
       const player = document.createElement("video");
-      player.src = trailer.getAttribute("href");
+      // H.264 first (plays everywhere, Safari and iOS included), WebM as the second format
+      const mp4 = trailer.getAttribute("href");
+      for (const [src, type] of [[mp4, "video/mp4"], [mp4.replace(/\.mp4$/, ".webm"), "video/webm"]]) {
+        const source = document.createElement("source");
+        source.src = src;
+        source.type = type;
+        player.append(source);
+      }
       player.title = "Slot Theory trailer";
       player.controls = true;
-      player.autoplay = true;
+      player.autoplay = true;  // started by the click, so the browser allows the sound
       player.playsInline = true;
       player.preload = "auto";
       const frame = document.createElement("div");
@@ -98,6 +106,13 @@
       frame.append(player);
       trailer.replaceWith(frame);
       player.focus();
+      // No format played: put the still poster back, never a broken player
+      player.lastElementChild.addEventListener("error", () => {
+        trailer.dataset.failed = "1";
+        const label = trailer.querySelector(".trailer-play");
+        if (label) label.lastChild.textContent = "Video will not play here. Open the file";
+        frame.replaceWith(trailer);
+      });
     });
   }
 
