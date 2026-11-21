@@ -80,6 +80,19 @@
     box.addEventListener("click", (e) => { if (e.target === box) box.close(); });
   }
 
+  // ---- Anonymous click counts (GoatCounter, cookieless): store links, the browser game, the trailer ----
+  const count = (name) => {
+    try { if (window.goatcounter && window.goatcounter.count) window.goatcounter.count({ path: name, title: name, event: true }); } catch (e) { /* analytics never breaks the page */ }
+  };
+  document.addEventListener("click", (e) => {
+    const a = e.target.closest && e.target.closest("a[href]");
+    if (!a) return;
+    const h = a.href;
+    if (h.startsWith("https://store.steampowered.com/app/")) count("click-steam");
+    else if (h.startsWith("https://play.google.com/")) count("click-google-play");
+    else if (h.startsWith("https://play.7antsgames.com/")) count("click-play-" + (new URL(h).search.replace(/^\?/, "").split("&")[0].split("=")[0] || "web"));
+  });
+
   // ---- Slot Theory trailer: hosted here, the video file loads only when someone presses play ----
   const trailer = document.getElementById("trailer");
   if (trailer) {
@@ -87,6 +100,7 @@
       if (e.ctrlKey || e.metaKey || e.shiftKey || e.button !== 0) return;  // a new tab, as the link asks
       if (trailer.dataset.failed) return;  // the player failed once: let the link open the file
       e.preventDefault();
+      count("trailer-play");
       const player = document.createElement("video");
       // H.264 first (plays everywhere, Safari and iOS included), WebM as the second format
       const mp4 = trailer.getAttribute("href");

@@ -8,10 +8,10 @@ The studio site: **FUCK OFF** (Mo' Mentum Mo' Problems), playable in the browser
 
 Published at [7antsgames.com](https://7antsgames.com) with GitHub Pages from `main` → `/docs`
 (`docs/CNAME`; DNS at Cloudflare: CNAME `@` and `www` → `dextrome.github.io`, DNS only). Preview locally by serving `docs`
-(`python -m http.server 8080 -d docs`). No build step, no dependencies, no cookies or
-analytics; fonts are self-hosted (Silkscreen and Space Grotesk, SIL Open Font License). The Slot
+(`python -m http.server 8080 -d docs`). No build step, no dependencies, no cookies. The only analytics is
+cookieless, anonymous GoatCounter (`7antsgames.goatcounter.com`, script tag after `app.js` on each page, click events in `app.js`); fonts are self-hosted (Silkscreen and Space Grotesk, SIL Open Font License). The Slot
 Theory trailer is self-hosted (`docs/assets/slot-theory/trailer.mp4`, H.264 for every device, plus a WebM; re-encoded from the 69 MB master
-to about 16 MB) and loads only when someone presses play. Nothing comes from other sites.
+to about 16 MB) and loads only when someone presses play. The only thing from another site is the GoatCounter script.
 
 ## Pages
 
